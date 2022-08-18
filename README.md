@@ -16,8 +16,8 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
    - [Requirements](#requirements)
    - [Installation](#installation)
    - [Prometheus Server](#prometheus-server)
+1. [Future Goals](#future-goals)
 1. [Contributors](#contributors)
-1. Future Goals
 1. [License](#license)
 
 
@@ -27,11 +27,13 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
   
 
 
-## Under the Hood
+## Built With
 
 <p align="center">
-<img src="" title="React" alt="React" width="50" height="40"/>&nbsp;
-<img src="" title="React" alt="React" width="50" height="40"/>&nbsp;
+<img src="" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
+<img src="" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
+<img src="" title="Docker" alt="Docker" width="50" height="40"/>&nbsp;
+<img src="" title="NextJS" alt="NextJS" width="50" height="40"/>&nbsp;
 <img src="" title="React" alt="React" width="50" height="40"/>&nbsp;
 </p>
 
@@ -39,7 +41,7 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
 
 
 
-## Stretch Goals
+## Future Goals
 
 
 ## Contributors
