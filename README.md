@@ -20,7 +20,6 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
 
 1. [How It Works](#how-it-works)
 1. [Under the Hood](#under-the-hood)
-   - [Built With](#built-with)
 1. [Getting Started](#getting-started)
    - [Requirements](#requirements)
    - [Installation](#installation)
@@ -38,15 +37,17 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
   
 
 
-## Built With
+## Under The Hood
 
 <p align="center">
-<img src="" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
-<img src="" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
-<img src="" title="Docker" alt="Docker" width="50" height="40"/>&nbsp;
-<img src="" title="NextJS" alt="NextJS" width="50" height="40"/>&nbsp;
-<img src="" title="React" alt="React" width="50" height="40"/>&nbsp;
-<img src="" title="MaterialUI" alt="MaterialUI" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-original-wordmark.svg" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/graphql/graphql-plain-wordmark.svg" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker" alt="Docker" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg" title="NextJS" alt="NextJS" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original-wordmark.svg" title="Express" alt="Express" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/materialui/materialui-original.svg" title="MaterialUI" alt="MaterialUI" width="50" height="40"/>&nbsp;
 <img src="" title="ChartJS" alt="ChartJS" width="50" height="40"/>&nbsp;
 <img src="" title="PromQL" alt="PromQL" width="50" height="40"/>&nbsp;
 </p>
