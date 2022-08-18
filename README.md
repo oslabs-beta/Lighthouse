@@ -8,6 +8,7 @@
 <a href="https://github.com/oslabs-beta/Lighthouse/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/oslabs-beta/Lighthouse"></a>
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oslabs-beta/Lighthouse">
 </div>
+<strong> A light-weight, minimal Kafka cluster monitoring and data management tool. </strong> 
  
 Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and managing Kafka clusters - in <strong>real</strong> time. Lightouse provides a dashboard view of essential performance metrics for monitoring Kafka cluster health, allows for topic management within clusters, and performance comparisons based on historical data.
 
