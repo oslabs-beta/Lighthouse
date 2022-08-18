@@ -23,7 +23,9 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
 
 ## How It Works
 
-Utilizing a prometheus server and a pre-defined set of graphQL query requests, Lighthouse pulls data from the prometheus server to directly render and display usage statistics related to cluster performance on your local environment. 
+  Lighthouse is a <strong>typescript-built, open-source application</strong> that utilizies a definitive set of graphQL parameters to query a Prometheus server, allowing usage data of your Kafka clusters to directly render in a flexible graphical interface. This interface is customizable, allowing users to manipulate and display cluster metrics that are important to them.
+  
+
 
 ## Under the Hood
 
