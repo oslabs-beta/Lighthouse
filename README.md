@@ -8,7 +8,7 @@
 <a href="https://github.com/oslabs-beta/Lighthouse/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/oslabs-beta/Lighthouse"></a>
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oslabs-beta/Lighthouse">
 
-<strong> A light-weight, minimal Kafka cluster monitoring and data management tool. </strong> 
+<strong> A minimal, light-weight Kafka cluster monitoring and data management tool. </strong> 
 </div>
 
  
