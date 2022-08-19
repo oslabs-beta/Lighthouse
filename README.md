@@ -33,7 +33,7 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
 
 # How It Works
 
-  Lighthouse is a <strong>typescript-built, open-source application</strong> that utilizies a predefined set of graphQL parameters to query a Prometheus server, allowing usage data of your Kafka clusters to directly render in a flexible graphical interface. This interface is customizable, allowing for customization of metrics that are important to the specific user.
+  Lighthouse is a <strong>typescript-built, open-source application</strong> that utilizies a predefined set of graphQL parameters to query a Prometheus server, allowing usage data of your Kafka clusters to directly render in a flexible graphical interface. This interface is customizable, allowing for a dynamic display of metrics that are important to each specific user.
   
 With Lighthouse, users are able to:
 
