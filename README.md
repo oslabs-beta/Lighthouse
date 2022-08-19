@@ -37,16 +37,16 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
   
 With Lighthouse, users are able to:
 
-# Monitoring
+# Monitoring (insert video below)
 
 A minimal GUI provides clear and custom visualization of cluster peformance and health. Users are able to see what they want to see, how they want to see it - performance can be represented in several ways, including scatter plots, pie charts, or traditional graphs.
 
-# Writability
+# Writability (insert video below)
 
 Topics can be directly accessed and manipulated within the cluster via a write feature that manages cluster information.
 
 
-# Performance Comparison
+# Performance Comparison (insert video below)
 
 Utilizing an import and export feature, Lighthouse allows for current metrics to be exported and external metrics to be imported. A comparison tool allows for these metrics at different instances to be compared side-by-side for immediate diagnosis of cluster health.
 
