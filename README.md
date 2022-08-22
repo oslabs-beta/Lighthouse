@@ -12,13 +12,12 @@
 </div>
 
  
-Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and managing Kafka clusters - in <strong>real</strong> time. Lightouse provides a dashboard view of essential performance metrics for monitoring Kafka cluster health, allows for topic management within clusters, and performance comparisons based on historical data.
+Lighthouse is a mininal, multi-faceted open-source tool useful for visualizing and managing Kafka clusters - in <strong>real</strong> time. It provides a dashboard view of essential performance metrics for monitoring Kafka cluster health, allows for topic management within clusters, and integrates performance comparison based on historical data.
 
 
 ## Table of Contents
 
 1. [How It Works](#how-it-works)
-1. [Under the Hood](#under-the-hood)
    - [Monitoring](#monitoring)
    - [Writability](#writability)
    - [Performance Comparison](#performance-comparison)
@@ -26,29 +25,38 @@ Lighthouse is a mininal, multi-faceted developer tool useful for visualizing and
    - [Requirements](#requirements)
    - [Installation](#installation)
    - [Prometheus Server](#prometheus-server)
-1. [Future Goals](#future-goals)
+1. [Under the Hood](#under-the-hood)
 1. [Contributors](#contributors)
 1. [License](#license)
 
 
-# How It Works
+## How It Works
 
-  Lighthouse is a <strong>typescript-built, open-source application</strong> that utilizies a predefined set of graphQL parameters to query a Prometheus server, allowing usage data of your Kafka clusters to directly render in a flexible graphical interface. This interface is customizable, allowing for a dynamic display of metrics that are important to each specific user.
-  
-With Lighthouse, users are able to:
+  Lighthouse is a <strong>typescript-built, open-source developer tool</strong> that utilizies a predefined set of graphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a flexible graphical interface. This interface is customizable, allowing for a dynamic display of metrics that are important to each specific user.
 
-# Monitoring (insert video below)
+
+
+# Monitoring
 
 A minimal GUI provides clear and custom visualization of cluster peformance and health. Users are able to see what they want to see, how they want to see it - performance can be represented in several ways, including scatter plots, pie charts, or traditional graphs.
 
-# Writability (insert video below)
+# Writability
 
 Topics can be directly accessed and manipulated within the cluster via a write feature that manages cluster information.
 
 
-# Performance Comparison (insert video below)
+# Performance Comparison
 
 Utilizing an import and export feature, Lighthouse allows for current metrics to be exported and external metrics to be imported. A comparison tool allows for these metrics at different instances to be compared side-by-side for immediate diagnosis of cluster health.
+
+
+## Getting Started
+
+```javascript
+npm install;
+npm run build;
+npm start;
+```
 
 
 # Under The Hood
@@ -64,15 +72,7 @@ Utilizing an import and export feature, Lighthouse allows for current metrics to
 <img src="https://github.com/devicons/devicon/blob/master/icons/materialui/materialui-original.svg" title="MaterialUI" alt="MaterialUI" width="50" height="40"/>&nbsp;
 </p>
 
-# Getting Started
-
-```javascript
-npm install;
-npm run build;
-npm start;
-```
-
-# Contributors
+## Contributors
 
 <table align="center"><tbody><tr>
   <td align="center" width="150">
