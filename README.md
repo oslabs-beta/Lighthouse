@@ -47,7 +47,7 @@ Topics can be directly accessed and manipulated within the cluster via a write f
 
 # Performance Comparison
 
-Utilizing an import and export feature, Lighthouse allows for current metrics to be exported and external metrics to be imported. A comparison tool allows for these metrics at different instances to be compared side-by-side for immediate diagnosis of cluster health.
+Utilizing an import and export feature, Lighthouse allows for current metrics to be exported and external metrics to be imported. A comparison tool allows for these metrics at different instances to be compared side-by-side for immediate diagnostics of cluster health.
 
 
 ## Getting Started
