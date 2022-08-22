@@ -64,6 +64,7 @@ npm start;
 <p align="center">
 <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-original-wordmark.svg" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/graphql/graphql-plain-wordmark.svg" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="Typescript" alt="Typescript" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker" alt="Docker" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg" title="NextJS" alt="NextJS" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="50" height="40"/>&nbsp;
@@ -76,7 +77,7 @@ npm start;
 
 <table align="center"><tbody><tr>
   <td align="center" width="150">
-    <img src="" style="height: 5rem; width: 5rem;" />
+    <img src="https://github.com/oslabs-beta/Lighthouse/blob/main/GithubImages/Andy-profile-pic.jpg" style="height: 5rem; width: 5rem;" />
     <br/>
     <strong>Andy Kuang</strong>
     <br/>
