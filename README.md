@@ -30,27 +30,27 @@ Lighthouse is a lightweight, open-source developer tool useful for visualizing a
 1. [License](#license)
 
 
-## How It Works
+# How It Works
 
   Lighthouse is a <strong>typescript-built, open-source developer tool</strong> that utilizies a predefined set of graphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a flexible graphical interface. This interface is customizable, allowing for a dynamic display of metrics that are important to each specific user.
 
 
 
-# Monitoring
+## Monitoring
 
 A minimal GUI provides clear and custom visualization of cluster peformance and health. Users are able to see what they want to see, how they want to see it - performance can be represented in several ways, including scatter plots, pie charts, or traditional graphs.
 
-# Writability
+## Writability
 
 Topics can be directly accessed and manipulated within the cluster via a write feature that manages cluster information.
 
 
-# Performance Comparison
+## Performance Comparison
 
 Utilizing an import and export feature, Lighthouse allows for current metrics to be exported and external metrics to be imported. A comparison tool allows for these metrics at different instances to be compared side-by-side for immediate diagnostics of cluster health.
 
 
-## Getting Started
+# Getting Started
 
 ```javascript
 npm install;
@@ -59,7 +59,7 @@ npm start;
 ```
 
 
-# Under The Hood
+## Under The Hood
 
 <p align="center">
 <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-original-wordmark.svg" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
