@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "nodemon server/index.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -22,6 +22,7 @@
     "dotenv": "^16.0.1",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
+    "express": "^4.18.1",
     "typescript": "^4.7.4"
   }
 }
