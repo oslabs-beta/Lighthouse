@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon server/index.js",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "graphql": "^16.6.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -19,11 +21,8 @@
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "chart.js": "^3.9.1",
-    "dotenv": "^16.0.1",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
-    "express": "^4.18.1",
-    "nodemon": "^2.0.19",
     "typescript": "^4.7.4"
   }
 }
