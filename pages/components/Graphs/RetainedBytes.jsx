@@ -122,4 +122,4 @@ function RetainedBytes() {
 
 
 
-  module.exports = { RetainedBytes }
+  module.exports = RetainedBytes

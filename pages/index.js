@@ -10,14 +10,14 @@ import SearchAppBar from "./components/Navbar/navbar.jsx"
 
 
 // Importing graphs
-import ActiveConnectionCount from "./components/Graphs/ActiveConnectionCount";
-import ReceivedBytes from "./components/Graphs/ReceivedBytes";
-import ReceivedRecords from "./components/Graphs/ReceivedRecords";
-import RetainedBytes from "./components/Graphs/RetainedBytes";
-import SentBytes from "./components/Graphs/SentBytes";
-import SentRecords from "./components/Graphs/SentRecords";
-import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount";
-import PartitionCount from "./components/Graphs/PartitionCount";
+import ActiveConnectionCount from "./components/Graphs/ActiveConnectionCount.jsx";
+import ReceivedBytes from "./components/Graphs/ReceivedBytes.jsx";
+import ReceivedRecords from "./components/Graphs/ReceivedRecords.jsx";
+import RetainedBytes from "./components/Graphs/RetainedBytes.jsx";
+import SentBytes from "./components/Graphs/SentBytes.jsx";
+import SentRecords from "./components/Graphs/SentRecords.jsx";
+import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
+import PartitionCount from "./components/Graphs/PartitionCount.jsx";
 
 
 export default function Home({ countries }) {

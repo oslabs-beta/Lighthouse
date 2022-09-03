@@ -122,4 +122,4 @@ function SentBytes() {
 
 
 
-  module.exports = { SentBytes }
+  module.exports = SentBytes
