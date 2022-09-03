@@ -65,17 +65,17 @@ function randomIntFromInterval(min, max) { // min and max included
 
 const dummyData = []
 
-let x = (randomIntFromInterval(35, 57))
-let y = (randomIntFromInterval(35, 57))
-let z = (randomIntFromInterval(35, 57))
-let a = (randomIntFromInterval(35, 57))
 
 
 function ActiveControllersGraph() {
   
+
+
+
+  
   //Chart Data state
   const [ chartData, setChartData ] = useState({
-    datasets: []
+    datasets: [1,2,3,4]
   })
 
 
@@ -83,21 +83,24 @@ function ActiveControllersGraph() {
   const [ chartOptions, setChartOptions ] = useState({
 
   })
-
+ 
   useEffect(() => {
+console.log(chartData)
     setChartData({
       // Below is the x axis data
-      labels: ["1", "2", "3", "4"],
+      labels: [2,3,4,5,6], 
       datasets: [
         {
           label: "Active Controllers",
           // Below is the y axis data
-          data: [x, y, z, a],
+          data: [1,2,3,4,512,31,312,31,3221,3,123,12,31],
           borderColor: "rgba(53,162,235,0.4)",
           backgroundColor: "rgba(53,162,235,0.4)"
         }
       ]
     }) 
+
+    console.log(chartData.labels)
     setChartOptions({
       responsive: true,
       plugins: {

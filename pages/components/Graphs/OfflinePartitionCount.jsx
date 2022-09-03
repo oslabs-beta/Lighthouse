@@ -65,10 +65,10 @@ function randomIntFromInterval(min, max) { // min and max included
 
 const dummyData = []
 
-let x = (randomIntFromInterval(35, 57))
-let y = (randomIntFromInterval(35, 57))
-let z = (randomIntFromInterval(35, 57))
-let a = (randomIntFromInterval(35, 57))
+let x = (randomIntFromInterval(10, 1000))
+let y = (randomIntFromInterval(10, 1000))
+let z = (randomIntFromInterval(10, 1000))
+let a = (randomIntFromInterval(10, 1000))
 
 
 function OfflinePartitionCount() {

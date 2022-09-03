@@ -11,6 +11,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
+  
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.black, 0.15),
   '&:hover': {
@@ -71,7 +72,6 @@ export default function SearchAppBar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
           </Typography>
           <Search>
             <SearchIconWrapper>
