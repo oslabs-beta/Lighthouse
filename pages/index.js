@@ -16,8 +16,8 @@ import ReceivedRecords from "./components/Graphs/ReceivedRecords.jsx";
 import RetainedBytes from "./components/Graphs/RetainedBytes.jsx";
 import SentBytes from "./components/Graphs/SentBytes.jsx";
 import SentRecords from "./components/Graphs/SentRecords.jsx";
-import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount";
-import PartitionCount from "./components/Graphs/PartitionCount";
+import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
+import PartitionCount from "./components/Graphs/PartitionCount.jsx";
 
 
 export default function Home({ countries }) {
@@ -94,7 +94,6 @@ export default function Home({ countries }) {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >

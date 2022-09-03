@@ -121,4 +121,4 @@ function ActiveConnectionCount() {
 
 
 
-  module.exports = ActiveConnectionCount;
+  module.exports = ActiveConnectionCount
