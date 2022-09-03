@@ -122,4 +122,4 @@ function PartitionCount() {
 
 
 
-  module.exports = { PartitionCount }
+  module.exports = PartitionCount

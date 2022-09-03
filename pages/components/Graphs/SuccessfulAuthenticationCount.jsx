@@ -122,4 +122,4 @@ function SuccessfulAuthenticationCount() {
 
 
 
-  module.exports = { SuccessfulAuthenticationCount }
+  module.exports = SuccessfulAuthenticationCount

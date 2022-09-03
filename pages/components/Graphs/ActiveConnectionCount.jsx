@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import {
-    Chart as ChartJS,
-    ArcElement,
+  Chart as ChartJS,
+  ArcElement,
   LineElement,
   BarElement,
   PointElement,
@@ -63,7 +63,6 @@ function randomIntFromInterval(min, max) { // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-const dummyData = []
 
 let x = (randomIntFromInterval(10, 1000))
 let y = (randomIntFromInterval(10, 1000))
@@ -71,7 +70,7 @@ let z = (randomIntFromInterval(10, 1000))
 let a = (randomIntFromInterval(10, 1000))
 
 
-function OnlinePartitionsGraph() {
+function ActiveConnectionCount() {
   
   //Chart Data state
   const [ chartData, setChartData ] = useState({
@@ -122,4 +121,4 @@ function OnlinePartitionsGraph() {
 
 
 
-  module.exports = { OnlinePartitionsGraph }
+  module.exports = ActiveConnectionCount;

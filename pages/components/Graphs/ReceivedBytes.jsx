@@ -122,4 +122,4 @@ function ReceivedBytes() {
 
 
 
-  module.exports = { ReceivedBytes }
+  module.exports = ReceivedBytes

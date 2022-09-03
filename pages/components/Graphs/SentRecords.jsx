@@ -122,4 +122,4 @@ function SentRecords() {
 
 
 
-  module.exports = { SentRecords }
+  module.exports = SentRecords
