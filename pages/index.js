@@ -10,17 +10,14 @@ import SearchAppBar from "./components/Navbar/navbar.jsx"
 
 
 // Importing graphs
-import { CpuUsageGraph } from "./components/Graphs/CpuUsageGraph.jsx";
-import { ActiveControllersGraph } from "./components/Graphs/ActiveControllersGraph.jsx";
-import { BrokersOnlineGraph } from "./components/Graphs/BrokersOnlineGraph.jsx";
-import { TotalBrokers } from "./components/Graphs/TotalBrokers.jsx";
-import { UnderReplicatedPartitionsGraph } from "./components/Graphs/UnderReplicatedPartitionsGraph.jsx";
-import { GpuUsageGraph } from "./components/Graphs/GpuUsageGraph.jsx";
-import { OfflinePartitionCount } from "./components/Graphs/OfflinePartitionCount.jsx";
-import { OnlinePartitionsGraph } from "./components/Graphs/OnlinePartitionsGraph.jsx";
-import { UncleanLeaderElectionRate } from "./components/Graphs/UncleanLeaderElectionRate.jsx";
-import { UnderMinISSRPartitions } from "./components/Graphs/UnderMinISSRPartitions.jsx";
-
+import ActiveConnectionCount from "./components/Graphs/ActiveConnectionCount";
+import ReceivedBytes from "./components/Graphs/ReceivedBytes";
+import ReceivedRecords from "./components/Graphs/ReceivedRecords";
+import RetainedBytes from "./components/Graphs/RetainedBytes";
+import SentBytes from "./components/Graphs/SentBytes";
+import SentRecords from "./components/Graphs/SentRecords";
+import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount";
+import PartitionCount from "./components/Graphs/PartitionCount";
 
 
 export default function Home({ countries }) {
@@ -42,11 +39,11 @@ export default function Home({ countries }) {
 <div className={styles.cardGrid1}>
         
         <div id = {styles.card1}>
-        <CpuUsageGraph/>
+        <ActiveConnectionCount/>
         </div>
 
         <div id = {styles.card2}>
-        <GpuUsageGraph/>
+        <RetainedBytes/>
         </div>
 
 </div>
@@ -57,35 +54,27 @@ export default function Home({ countries }) {
 <div className={styles.cardGrid2}>
 
         <div id = {styles.card3}>
-        <TotalBrokers/>
+        <PartitionCount/>
         </div>
 
         <div id = {styles.card4}>
-        <UnderReplicatedPartitionsGraph/>
+        <ReceivedBytes/>
+        </div>
+        
+        <div id = {styles.card4}>
+        <ReceivedRecords/>
         </div>
 
         <div id = {styles.card5}>
-        <ActiveControllersGraph/>
+        <SentBytes/>
         </div>
 
         <div id = {styles.card6}>
-        <OnlinePartitionsGraph/>
+        <SentRecords/>
         </div >
 
         <div id = {styles.card7}>
-        <BrokersOnlineGraph/>
-        </div>
-
-        <div id = {styles.card8}>
-        <OfflinePartitionCount/>
-        </div>
-
-        <div id = {styles.card9}>
-        <UnderMinISSRPartitions/>
-        </div>
-
-        <div id = {styles.card10}>
-        <UncleanLeaderElectionRate/>
+        <SuccessfulAuthenticationCount/>
         </div>
 
 </div>

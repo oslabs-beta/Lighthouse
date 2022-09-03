@@ -65,17 +65,17 @@ function randomIntFromInterval(min, max) { // min and max included
 
 const dummyData = []
 
+let x = (randomIntFromInterval(10, 1000))
+let y = (randomIntFromInterval(10, 1000))
+let z = (randomIntFromInterval(10, 1000))
+let a = (randomIntFromInterval(10, 1000))
 
 
-function ActiveControllersGraph() {
-  
-
-
-
+function PartitionCount() {
   
   //Chart Data state
   const [ chartData, setChartData ] = useState({
-    datasets: [1,2,3,4]
+    datasets: []
   })
 
 
@@ -83,24 +83,21 @@ function ActiveControllersGraph() {
   const [ chartOptions, setChartOptions ] = useState({
 
   })
- 
+
   useEffect(() => {
-console.log(chartData)
     setChartData({
       // Below is the x axis data
-      labels: [2,3,4,5,6], 
+      labels: ["1", "2", "3", "4"],
       datasets: [
         {
-          label: "Active Controllers",
+          label: "Partition Count",
           // Below is the y axis data
-          data: [1,2,3,4,512,31,312,31,3221,3,123,12,31],
+          data: [x, y, z, a],
           borderColor: "rgba(53,162,235,0.4)",
           backgroundColor: "rgba(53,162,235,0.4)"
         }
       ]
     }) 
-
-    console.log(chartData.labels)
     setChartOptions({
       responsive: true,
       plugins: {
@@ -109,7 +106,7 @@ console.log(chartData)
         },
         title: {
           display: true,
-          text: "Active Controllers",
+          text: "Partition Count",
         }
       },
     })
@@ -125,4 +122,4 @@ console.log(chartData)
 
 
 
-  module.exports = { ActiveControllersGraph }
+  module.exports = { PartitionCount }

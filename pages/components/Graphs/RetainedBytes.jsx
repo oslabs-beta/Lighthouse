@@ -71,7 +71,7 @@ let z = (randomIntFromInterval(10, 1000))
 let a = (randomIntFromInterval(10, 1000))
 
 
-function BrokersOnlineGraph() {
+function RetainedBytes() {
   
   //Chart Data state
   const [ chartData, setChartData ] = useState({
@@ -90,7 +90,7 @@ function BrokersOnlineGraph() {
       labels: ["1", "2", "3", "4"],
       datasets: [
         {
-          label: "Brokers Online",
+          label: "Retained Bytes",
           // Below is the y axis data
           data: [x, y, z, a],
           borderColor: "rgba(53,162,235,0.4)",
@@ -106,7 +106,7 @@ function BrokersOnlineGraph() {
         },
         title: {
           display: true,
-          text: "Brokers Online",
+          text: "Retained Bytes",
         }
       },
     })
@@ -122,4 +122,4 @@ function BrokersOnlineGraph() {
 
 
 
-  module.exports = { BrokersOnlineGraph }
+  module.exports = { RetainedBytes }

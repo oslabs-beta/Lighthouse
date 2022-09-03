@@ -71,7 +71,7 @@ let z = (randomIntFromInterval(10, 1000))
 let a = (randomIntFromInterval(10, 1000))
 
 
-function GpuUsageGraph() {
+function ReceivedBytes() {
   
   //Chart Data state
   const [ chartData, setChartData ] = useState({
@@ -87,12 +87,12 @@ function GpuUsageGraph() {
   useEffect(() => {
     setChartData({
       // Below is the x axis data
-      labels: ["1", "2", "3", "4"],
+      labels: ["1", "2", "3", "4", "5"],
       datasets: [
         {
-          label: "GPU Usage",
+          label: "Received Bytes",
           // Below is the y axis data
-          data: [x, y, z, a],
+          data: [x, y, z, a, 50],
           borderColor: "rgba(53,162,235,0.4)",
           backgroundColor: "rgba(53,162,235,0.4)"
         }
@@ -106,7 +106,7 @@ function GpuUsageGraph() {
         },
         title: {
           display: true,
-          text: "GPU Usage",
+          text: "Received Bytes",
         }
       },
     })
@@ -122,4 +122,4 @@ function GpuUsageGraph() {
 
 
 
-  module.exports = { GpuUsageGraph }
+  module.exports = { ReceivedBytes }

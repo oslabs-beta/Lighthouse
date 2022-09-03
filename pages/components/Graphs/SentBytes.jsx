@@ -65,13 +65,13 @@ function randomIntFromInterval(min, max) { // min and max included
 
 const dummyData = []
 
-let x = (randomIntFromInterval(35, 57))
-let y = (randomIntFromInterval(35, 57))
-let z = (randomIntFromInterval(35, 57))
-let a = (randomIntFromInterval(35, 57))
+let x = (randomIntFromInterval(10, 1000))
+let y = (randomIntFromInterval(10, 1000))
+let z = (randomIntFromInterval(10, 1000))
+let a = (randomIntFromInterval(10, 1000))
 
 
-function TotalBrokers() {
+function SentBytes() {
   
   //Chart Data state
   const [ chartData, setChartData ] = useState({
@@ -90,7 +90,7 @@ function TotalBrokers() {
       labels: ["1", "2", "3", "4"],
       datasets: [
         {
-          label: "Total Brokers",
+          label: "Sent Bytes",
           // Below is the y axis data
           data: [x, y, z, a],
           borderColor: "rgba(53,162,235,0.4)",
@@ -106,7 +106,7 @@ function TotalBrokers() {
         },
         title: {
           display: true,
-          text: "Total Brokers",
+          text: "Sent Bytes",
         }
       },
     })
@@ -122,4 +122,4 @@ function TotalBrokers() {
 
 
 
-  module.exports = { TotalBrokers }
+  module.exports = { SentBytes }

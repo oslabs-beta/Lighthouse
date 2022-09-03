@@ -65,13 +65,13 @@ function randomIntFromInterval(min, max) { // min and max included
 
 const dummyData = []
 
-let x = (randomIntFromInterval(35, 57))
-let y = (randomIntFromInterval(35, 57))
-let z = (randomIntFromInterval(35, 57))
-let a = (randomIntFromInterval(35, 57))
+let x = (randomIntFromInterval(10, 1000))
+let y = (randomIntFromInterval(10, 1000))
+let z = (randomIntFromInterval(10, 1000))
+let a = (randomIntFromInterval(10, 1000))
 
 
-function UncleanLeaderElectionRate() {
+function SentRecords() {
   
   //Chart Data state
   const [ chartData, setChartData ] = useState({
@@ -90,7 +90,7 @@ function UncleanLeaderElectionRate() {
       labels: ["1", "2", "3", "4"],
       datasets: [
         {
-          label: "Unclean Leader Election Rate",
+          label: "Sent Records",
           // Below is the y axis data
           data: [x, y, z, a],
           borderColor: "rgba(53,162,235,0.4)",
@@ -106,7 +106,7 @@ function UncleanLeaderElectionRate() {
         },
         title: {
           display: true,
-          text: "Unclean Leader Election Rate",
+          text: "Sent Records",
         }
       },
     })
@@ -122,4 +122,4 @@ function UncleanLeaderElectionRate() {
 
 
 
-  module.exports = { UncleanLeaderElectionRate }
+  module.exports = { SentRecords }

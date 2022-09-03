@@ -71,7 +71,7 @@ let z = (randomIntFromInterval(10, 1000))
 let a = (randomIntFromInterval(10, 1000))
 
 
-function OfflinePartitionCount() {
+function ReceivedRecords() {
   
   //Chart Data state
   const [ chartData, setChartData ] = useState({
@@ -90,7 +90,7 @@ function OfflinePartitionCount() {
       labels: ["1", "2", "3", "4"],
       datasets: [
         {
-          label: "Offline Partition Count",
+          label: "Received Records",
           // Below is the y axis data
           data: [x, y, z, a],
           borderColor: "rgba(53,162,235,0.4)",
@@ -106,7 +106,7 @@ function OfflinePartitionCount() {
         },
         title: {
           display: true,
-          text: "Offline Partition Count",
+          text: "Received Records",
         }
       },
     })
@@ -122,4 +122,4 @@ function OfflinePartitionCount() {
 
 
 
-  module.exports = { OfflinePartitionCount }
+  module.exports = { ReceivedRecords }
