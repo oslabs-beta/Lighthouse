@@ -115,7 +115,7 @@ function SentBytes() {
   
   return(
     <div>
-    <Line options={ chartOptions } data={chartData}/>
+    Sent Bytes
     </div>
   )
 }

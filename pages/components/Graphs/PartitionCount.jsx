@@ -115,7 +115,7 @@ function PartitionCount() {
   
   return(
     <div>
-    <Line options={ chartOptions } data={chartData}/>
+    Partition Count
     </div>
   )
 }

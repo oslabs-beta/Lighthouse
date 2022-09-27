@@ -115,7 +115,7 @@ function SentRecords() {
   
   return(
     <div>
-    <Line options={ chartOptions } data={chartData}/>
+    Sent Records
     </div>
   )
 }

@@ -115,7 +115,7 @@ function SuccessfulAuthenticationCount() {
   
   return(
     <div>
-    <Line options={ chartOptions } data={chartData}/>
+    Successful Authentication Count
     </div>
   )
 }

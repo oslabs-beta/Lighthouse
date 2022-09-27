@@ -115,7 +115,7 @@ function ReceivedRecords() {
   
   return(
     <div>
-    <Line options={ chartOptions } data={chartData}/>
+    Received Records
     </div>
   )
 }

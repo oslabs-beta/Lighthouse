@@ -115,7 +115,7 @@ function ReceivedBytes() {
   
   return(
     <div>
-    <Line options={ chartOptions } data={chartData}/>
+    Received Bytes
     </div>
   )
 }
