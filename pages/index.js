@@ -39,11 +39,11 @@ export default function Home({ countries }) {
 
 <div className={styles.cardGrid1}>
         
-        <div id = {styles.card1}>
+        <div id = {styles.card}>
          <ActiveConnectionCount/>
         </div>
 
-       <div id = {styles.card2}>
+       <div id = {styles.card}>
         <RetainedBytes/>
         </div>
 
@@ -53,27 +53,27 @@ export default function Home({ countries }) {
 
 <div className={styles.cardGrid2}>
 
-        <div id = {styles.card3}>
+        <div id = {styles.card}>
         <PartitionCount/>
         </div>
 
-        <div id = {styles.card4}>
+        <div id = {styles.card}>
         <ReceivedBytes/>
         </div>
         
-        <div id = {styles.card4}>
+        <div id = {styles.card}>
         <ReceivedRecords/>
         </div>
 
-        <div id = {styles.card5}>
+        <div id = {styles.card}>
         <SentBytes/>
         </div>
 
-        <div id = {styles.card6}>
+        <div id = {styles.card}>
         <SentRecords/>
         </div >
 
-        <div id = {styles.card7}>
+        <div id = {styles.card}>
         <SuccessfulAuthenticationCount/>
         </div>
 

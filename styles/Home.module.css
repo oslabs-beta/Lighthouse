@@ -84,14 +84,12 @@
 }
 
 .cardGrid2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
-.cardGrid1 #card1 {
+.cardGrid1 #card {
   margin: 1rem;
   padding: 1.5rem; 
   text-align: left;
@@ -100,12 +98,12 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  height: 500px;
-  width: 1000px;
+  height: 570px;
+  width: 1140px;
 }
 
-.cardGrid1 #card2 {
-  margin: 1rem;
+.cardGrid2 #card {
+  margin: 2rem;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -113,113 +111,10 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  height: 500px;
-  width: 1000px;
+  height: 400px;
+  width: 730px;
 }
 
-.cardGrid2 #card3 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
-
-.cardGrid2 #card4 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
-
-.cardGrid2 #card5 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
-
-.cardGrid2 #card6 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
-
-.cardGrid2 #card7 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
-
-.cardGrid2 #card8 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
-
-.cardGrid2 #card9 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
-
-.cardGrid2 #card10 {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
-  width: 500px;
-}
 
 .card:hover,
 .card:focus,
