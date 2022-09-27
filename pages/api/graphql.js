@@ -1,34 +1,28 @@
 import { gql, ApolloServer } from "apollo-server-micro";
-import {ApolloServerPluginLandingPageGraphQLPlayground} from "apollo-server-core";
-import prometheusAPI from "./prometheusAPI";
+import { ApolloServerPluginLandingPageLocalDefault } from "apollo-server-core";
+import { PrometheusAPI } from "./prometheusAPI";
 
 const typeDefs = gql`
-
-  type metricObj{
+  type Metric { 
     name: String
-    instance: String 
+    instance: String
     job: String
-    kafka_id: String
-  }
-  
-  type arrayObj{
-    time: Float
-    metric: String
+    kafka_id: String 
   }
 
-  type resultObj{
-    metric: metricObj
-    value: [arrayObj]
-  }
-  
-  type dataObj{
-    resultType: String
-    result: [resultObj]
+  type Result { 
+    value: [Int ] 
+    metric: Metric 
   }
 
-  type JSONResult {
-    status: String
-    data: dataObj
+  type Data {
+    resultType: String 
+    result: [Result ] 
+  }
+
+  type JSONResult { 
+    status: String 
+    data: Data 
   }
 
   type Query {
@@ -36,25 +30,35 @@ const typeDefs = gql`
   }
 `;
 
+// NEW resolvers 9/26/2022//
 const resolvers = {
-    Query: {
-        prometheus: async () => {
-            const output = await getPartitionCount()
-            return output
-        }
+  Query: {
+    prometheus: async (_, __, { dataSources }) => {
+      return dataSources.prometheusAPI.getPartitionCount();
     },
+  },
 };
 
+// NEW apolloServer 9/26/2022 //
+
 const apolloServer = new ApolloServer({
-    typeDefs,
-    resolvers,
-    playground: true,
-    plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
-    dataSources: () => {
-        return {
-          prometheusAPI: new prometheusAPI(),
-        };
-    },
+  typeDefs,
+  resolvers,
+  csrfPrevention: true,
+  cache: "bounded",
+  plugins:[
+    ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+  ],
+  dataSources: () => {
+    return {
+      prometheusAPI: new PrometheusAPI()
+    };
+  },
+  context: () => {
+    return {
+      token: 'foo',
+    };
+  },
 });
 
 const startServer = apolloServer.start();
@@ -71,39 +75,3 @@ export const config = {
         bodyParser: false,
     },
 };
-
-
-// let books = [
-//     {
-//         "id": 0,
-//         "name": "JavaScript for Dummies"
-//     },
-//     {
-//         "id": 1,
-//         "name": "Yeet"
-//     },
-//     {
-//         "id": 2,
-//         "name": "Yeet Pt.2: Electric Boogaloo "
-//     }
-//   // ... Write a few more ...
-// ]
-
-// const typeDefs = gql`
-//   type Book {
-//     id: ID!
-//     name: String
-//   }
-//   type Query {
-//     getBooks: [Book]
-//   }
-// `;
-
-
-// const resolvers = {
-//     Query: {
-//         getBooks: () => {
-//             return books
-//         }
-//     },
-// };
