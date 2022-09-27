@@ -1,7 +1,16 @@
+.container #nav {
+  display: flex;
+  background: #ABEBDB;
+  width: 100%;
+  height: 50px;
+}
 
+.containter #nav #github {
 
-.container {
-  padding: 0 2rem;
+}
+
+.containter #nav #profile {
+  
 }
 
 .main {
