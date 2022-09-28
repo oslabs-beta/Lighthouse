@@ -50,26 +50,33 @@ export default function Home({ countries }) {
 
         <div id = {styles.card}>
         <PartitionCount/>
+        0
+        {/* Put number here */}
         </div>
 
         <div id = {styles.card}>
         <ReceivedBytes/>
+        0
         </div>
         
         <div id = {styles.card}>
         <ReceivedRecords/>
+        0
         </div>
 
         <div id = {styles.card}>
         <SentBytes/>
+        0
         </div>
 
         <div id = {styles.card}>
         <SentRecords/>
+        0
         </div >
 
         <div id = {styles.card}>
         <SuccessfulAuthenticationCount/>
+        0
         </div>
 
 </div>

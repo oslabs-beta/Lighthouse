@@ -118,9 +118,9 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  height: 300px;
+  height: 200px;
   width: 700px;
-  font-size: 35px;
+  font-size: 45px;
   background: #394441;
 }
 
