@@ -14,6 +14,7 @@ export class PrometheusAPI extends RESTDataSource {
   // NEW getPartitionCount code// 
   async getPartitionCount() {
     // Send a GET request to the specified endpoint
-    return this.get("api/v1/query?query=confluent_kafka_server_partition_count&time=2022-09-22T16:49:21Z")  
+    let date = Math.floor((new Date().getTime()/1000)) - 180;
+    return this.get(`api/v1/query?query=confluent_kafka_server_partition_count&time=${date}`)  
   }
 }
