@@ -51,6 +51,7 @@ export default function Home({ countries }) {
   )
 }
 
+// OLD CODE // 
 export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
@@ -70,3 +71,26 @@ export async function getStaticProps() {
     },
  };
 }
+
+// NEW CODE 9/27/2022 //
+// export async function getStaticProps() {
+//   const { data } = await client.query({
+//     query: gql`
+//       query Query {
+//         prometheus {
+//           data {
+//             result {
+//               value
+//             }
+//           }
+//         }
+//       }
+//     `,
+//   });
+
+//   return {
+//     props: {
+//       countries: data.value
+//     },
+//  };
+// }
