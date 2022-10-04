@@ -18,17 +18,18 @@ import SentBytes from "./components/Graphs/SentBytes.jsx";
 import SentRecords from "./components/Graphs/SentRecords.jsx";
 import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
 import PartitionCount from "./components/Graphs/PartitionCount.jsx";
+import NavBar from "./components/Navbar/navbar"
 
 
 export default function Home({ countries }) {
   return (
     <div className={styles.container}>
-      <div id={styles.nav}>
+      {/* <div id={styles.nav}>
         <h1 id={styles.title}>Lighthouse</h1>
         <h1 id={styles.github}>Github</h1>
         <h1 id={styles.profile}>Profile</h1>
-      </div>
-
+      </div> */}
+    <NavBar/>
       <main className={styles.main}>
 
 
