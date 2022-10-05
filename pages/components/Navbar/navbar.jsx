@@ -4,7 +4,7 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -14,7 +14,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
+// import LighthouseLogo from '../../../public/LighthouseLogo'
 
 const pages = ['Github'];
 
@@ -23,17 +23,20 @@ export default function ResponsiveAppBar() {
 
   const handleOpenNavMenu = () => {
     setAnchorElNav(true);
+    if(anchorElNav) window.open('https://github.com/oslabs-beta/Lighthouse')
   };
   const handleCloseNavMenu = () => {
     setAnchorElNav(false);
   };
 
 
+  
+
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{backgroundColor: '#648c84'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* <LighthouseLogo sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h4"
             noWrap
@@ -42,9 +45,9 @@ export default function ResponsiveAppBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'Arial',
-              fontWeight: 700,
-              letterSpacing: '.5rem',
+              fontFamily: 'Helvetica',
+              fontWeight: 450,
+              letterSpacing: '1rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -53,7 +56,7 @@ export default function ResponsiveAppBar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -62,7 +65,7 @@ export default function ResponsiveAppBar() {
               color="inherit"
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton> */}
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -88,7 +91,7 @@ export default function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -111,7 +114,7 @@ export default function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                // onClick={handleCloseNavMenu}
+                onClick={handleOpenNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}

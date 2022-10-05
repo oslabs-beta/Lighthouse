@@ -29,7 +29,7 @@ export default function Home({ countries }) {
         <h1 id={styles.github}>Github</h1>
         <h1 id={styles.profile}>Profile</h1>
       </div> */}
-    <NavBar/>
+    <NavBar />
       <main className={styles.main}>
 
 
