@@ -44,7 +44,7 @@ function ActiveConnectionCount() {
               onRefresh: chart => {
                 chart.data.datasets.forEach(dataset => {
                   dataset.data.push({
-                    x: Date.now(),
+                    x: Date.now() /* possibly grab date.now from props */,
                     y: number
                   });
                 });
