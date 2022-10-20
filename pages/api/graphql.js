@@ -27,19 +27,41 @@ const typeDefs = gql`
 
   type Query {
     prometheus: JSONResult
+    receivedBytes: JSONResult
+    sentBytes: JSONResult
+    sentRecords: JSONResult
+    receivedRecords: JSONResult
+    successfulAuthenticationCount: JSONResult
+    activeConnectionCount: JSONResult
   }
 `;
 
-// NEW resolvers 9/26/2022//
 const resolvers = {
   Query: {
     prometheus: async (_, __, { dataSources }) => {
       return dataSources.prometheusAPI.getPartitionCount();
     },
+    receivedBytes: async (_,__, {dataSources}) => {
+      return dataSources.prometheusAPI.getReceivedBytes();
+    },
+    sentBytes: async (_,__, {dataSources}) => {
+      return dataSources.prometheusAPI.getSentBytes();
+    },
+    sentRecords: async (_,__, {dataSources}) => {
+      return dataSources.prometheusAPI.getSentRecords();
+    },
+    receivedRecords: async (_,__, {dataSources}) => {
+      return dataSources.prometheusAPI.getReceivedRecords();
+    },
+    successfulAuthenticationCount: async (_,__, {dataSources}) => {
+      return dataSources.prometheusAPI.getAuthCount();
+    },
+    activeConnectionCount: async (_,__, {dataSources}) => {
+      return dataSources.prometheusAPI.getActiveConnectionCount();
+    }
   },
 };
 
-// NEW apolloServer 9/26/2022 //
 
 const apolloServer = new ApolloServer({
   typeDefs,

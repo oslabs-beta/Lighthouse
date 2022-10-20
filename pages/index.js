@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { gql } from "@apollo/client";
+import gqlQueries from '../queries';
+import { gql, useQuery } from "@apollo/client";
 import client from "../apollo-client";
 
 
@@ -18,9 +19,11 @@ import SentBytes from "./components/Graphs/SentBytes.jsx";
 import SentRecords from "./components/Graphs/SentRecords.jsx";
 import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
 import PartitionCount from "./components/Graphs/PartitionCount.jsx";
+import { ConstructionOutlined } from '@mui/icons-material';
 
 
-export default function Home({ countries }) {
+  export default function Home({results}){
+  // console.log(results)
   return (
     <div className={styles.container}>
       <div id={styles.nav}>
@@ -32,7 +35,7 @@ export default function Home({ countries }) {
       <main className={styles.main}>
 
 
-<div className={styles.cardGrid1}>
+{/* <div className={styles.cardGrid1}>
         
         <div id = {styles.card}>
          <ActiveConnectionCount/>
@@ -42,41 +45,40 @@ export default function Home({ countries }) {
         <RetainedBytes/>
         </div>
 
-</div>
+</div> */}
 
 
 
 <div className={styles.cardGrid2}>
 
         <div id = {styles.card}>
-        <PartitionCount/>
-        0
-        {/* Put number here */}
+        {/* <PartitionCount/> */}
+        {/* {results.partitionCount.data.prometheus.data.result[0].value[1]} */}
         </div>
 
         <div id = {styles.card}>
         <ReceivedBytes/>
-        0
+        {/* {results.receivedBytes.data.receivedBytes.data.result[0].value[1]} */}
         </div>
         
         <div id = {styles.card}>
         <ReceivedRecords/>
-        0
+        {/* {receivedRecords} */}
         </div>
 
         <div id = {styles.card}>
         <SentBytes/>
-        0
+        {/* {sentBytes} */}
         </div>
 
         <div id = {styles.card}>
         <SentRecords/>
-        0
+        {/* {sentRecords} */}
+        {}
         </div >
 
         <div id = {styles.card}>
         <SuccessfulAuthenticationCount/>
-        0
         </div>
 
 </div>
@@ -85,46 +87,29 @@ export default function Home({ countries }) {
   )
 }
 
-// OLD CODE // 
 export async function getStaticProps() {
-  const { data } = await client.query({
-    query: gql`
-      query Countries {
-        countries {
-          code
-          name
-          emoji
-        }
-      }
-    `,
-  });
+const results = {};
+results.partitionCount = await client.query({
+  query: gqlQueries.partitionCount
+})
+// results.receivedBytes = await client.query({
+//   query: gqlQueries.receivedBytes
+// })
+results.sentRecords = await client.query({
+  query: gqlQueries.sentRecords
+})
+results.receivedRecords = await client.query({
+  query: gqlQueries.receivedRecords
+})
+results.authCount = await client.query({
+  query: gqlQueries.authCount
+})
 
   return {
     props: {
-      countries: data.countries.slice(0, 4),
+      results
     },
  };
 }
 
-// NEW CODE 9/27/2022 //
-// export async function getStaticProps() {
-//   const { data } = await client.query({
-//     query: gql`
-//       query Query {
-//         prometheus {
-//           data {
-//             result {
-//               value
-//             }
-//           }
-//         }
-//       }
-//     `,
-//   });
 
-//   return {
-//     props: {
-//       countries: data.value
-//     },
-//  };
-// }
