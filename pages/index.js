@@ -33,13 +33,15 @@ export default function Home({ countries }) {
       <main className={styles.main}>
 
 
+
+
 <div className={styles.cardGrid1}>
         
-        <div id = {styles.card}>
+        <div id = {styles.graph1}>
          <ActiveConnectionCount/>
         </div>
 
-       <div id = {styles.card}>
+       <div id = {styles.graph1}>
         <RetainedBytes/>
         </div>
 
