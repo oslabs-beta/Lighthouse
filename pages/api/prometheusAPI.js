@@ -20,7 +20,7 @@ export class PrometheusAPI extends RESTDataSource {
   
   async getReceivedBytes(){
     let date = Math.floor((new Date().getTime()/1000)) - 500;
-    console.log(date)
+    console.log('received bytes gql')
     return this.get(`api/v1/query?query=confluent_kafka_server_received_bytes&time=${date}`)
   }
 
@@ -30,6 +30,7 @@ export class PrometheusAPI extends RESTDataSource {
   }
 
   async getSentRecords(){
+    console.log('records is called in gql')
     let date = Math.floor((new Date().getTime()/1000)) - 540;
     return this.get(`api/v1/query?query=confluent_kafka_server_sent_records&time=${date}`)
   }

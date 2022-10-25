@@ -14,9 +14,13 @@ useEffect(() => {
       include: "active"
     })
     .then((data) => {
-      setReceivedBytes(data[0].data.receivedBytes.data.result[0].value[1])
+      console.log(data)
+      console.log(data[0].data.receivedBytes.data.result[0].value[1])
+      console.log(data[1].data.receivedRecords.data.result[0].value[1])
+      // console.log(data[0].data.receivedBytes.data.result[0].value[1])
+      // setReceivedBytes(data[0].data.receivedBytes.data.result[0].value[1])
     })
-  }, 30000)
+  }, 2000)
 
   return () => clearInterval(interval)
 
