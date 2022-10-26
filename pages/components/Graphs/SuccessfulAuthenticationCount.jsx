@@ -1,85 +1,24 @@
-import React, { useState, useEffect } from "react";
+import gqlQueries from "../../../queries";
+import { useEffect, useState } from "react";
+import { gql, useQuery } from '@apollo/client';
+import client from "../../../apollo-client";
 
-import {
-    Chart as ChartJS,
-    ArcElement,
-  LineElement,
-  BarElement,
-  PointElement,
-  BarController,
-  BubbleController,
-  DoughnutController,
-  LineController,
-  PieController,
-  PolarAreaController,
-  RadarController,
-  ScatterController,
-  CategoryScale,
-  LinearScale,
-  LogarithmicScale,
-  RadialLinearScale,
-  TimeScale,
-  TimeSeriesScale,
-  Decimation,
-  Filler,
-  Legend,
-  Title,
-  Tooltip,
-  SubTitle
 
-  } from 'chart.js';
-
-  import { Line } from "react-chartjs-2"
-  
-  ChartJS.register(
-    ArcElement,
-  LineElement,
-  BarElement,
-  PointElement,
-  BarController,
-  BubbleController,
-  DoughnutController,
-  LineController,
-  PieController,
-  PolarAreaController,
-  RadarController,
-  ScatterController,
-  CategoryScale,
-  LinearScale,
-  LogarithmicScale,
-  RadialLinearScale,
-  TimeScale,
-  TimeSeriesScale,
-  Decimation,
-  Filler,
-  Legend,
-  Title,
-  Tooltip,
-  SubTitle
-
-  );
-
-function randomIntFromInterval(min, max) { // min and max included 
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-const dummyData = []
-
-let x = (randomIntFromInterval(10, 1000))
-let y = (randomIntFromInterval(10, 1000))
-let z = (randomIntFromInterval(10, 1000))
-let a = (randomIntFromInterval(10, 1000))
 
 
 function SuccessfulAuthenticationCount() {
+const [authCount, setAuthCount] = useState(0);
+const {loading, error, data} = useQuery(gqlQueries.authCount);
+  
 
   return(
     <div>
-    Successful Authentication Count
+      <div>Successful Authentication Count</div>
+      {authCount}
     </div>
   )
 }
 
 
 
-  module.exports = SuccessfulAuthenticationCount
+  module.exports = SuccessfulAuthenticationCount;

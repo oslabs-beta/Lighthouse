@@ -1,49 +1,57 @@
-import { useEffect, useState } from "react";
-import gqlQueries from "../../../queries";
-import { gql, useQuery } from '@apollo/client';
-import client from "/Users/nao/codesmith/Lighthouse/apollo-client.js";
-
-export default function ReceivedBytes(){
-const [receivedBytes, setReceivedBytes] = useState(0);
-const {loading, error, data} = useQuery(gqlQueries.receivedBytes);
-
-useEffect(() => {
-  fetcher();
-  const interval = setInterval(()=> {
-    client.refetchQueries({
-      include: "active"
-    })
-    .then((data) => {
-      console.log(data)
-      console.log(data[0].data.receivedBytes.data.result[0].value[1])
-      console.log(data[1].data.receivedRecords.data.result[0].value[1])
-      // console.log(data[0].data.receivedBytes.data.result[0].value[1])
-      // setReceivedBytes(data[0].data.receivedBytes.data.result[0].value[1])
-    })
-  }, 2000)
-
-  return () => clearInterval(interval)
-
-}, [receivedBytes])
-
-function fetcher (){
-  console.log('calle')
-
-  client.query({
-    query: gqlQueries.receivedBytes
-  })
-  .then((data) => {
-      setReceivedBytes(data.data.receivedBytes.data.result[0].value[1])
-  })
-}
+import React, { useState, useEffect } from "react";
+import 'chartjs-adapter-luxon';
+import { Chart, LinearScale } from 'chart.js';
+import { Line } from 'react-chartjs-2';
+import StreamingPlugin from 'chartjs-plugin-streaming';
+import { gql, useQuery } from "@apollo/client";
+import client from "../../../apollo-client";
 
 
+Chart.register(StreamingPlugin);
+ 
 
-return (
-  <>
-  <div>{receivedBytes}</div>
-  </>
-)
+// every 1000ms, checking prometheus for an updated metric that will be displayed on the y-axis
+let number =  7;
+
+(function repeat() {
+
+   number = Math.random();
+   setTimeout(repeat, 1000);
+})();
 
 
-}
+function ReceivedBytes() {
+    return (
+    <Line
+      data={{
+        datasets: [{
+          label: 'Received Bytes',
+          backgroundColor: '#648c84',
+          borderColor: '#cdf3e9',
+          cubicInterpolationMode: 'monotone',
+          fill: true,
+          data: []
+        }]
+      }}
+      options={{
+        scales: {
+          x: {
+            type: 'realtime',
+            realtime: {
+              delay: 1000,
+              onRefresh: chart => {
+                chart.data.datasets.forEach(dataset => {
+                  dataset.data.push({
+                    x: Date.now(),
+                    y: number
+                  });
+                });
+              }
+            }
+          }
+        }
+      }}
+    />
+  );
+};
+  module.exports = ReceivedBytes

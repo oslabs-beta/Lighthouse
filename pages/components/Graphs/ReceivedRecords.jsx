@@ -1,41 +1,30 @@
 import { useEffect, useState } from "react";
 import gqlQueries from "../../../queries";
 import { gql, useQuery } from '@apollo/client';
-import client from "/Users/nao/codesmith/Lighthouse/apollo-client.js";
+import client from "../../../apollo-client";
 
 function ReceivedRecords() {
   const [receivedRecords, setReceivedRecords] = useState(0);
   const {loading, error, data} = useQuery(gqlQueries.receivedRecords);
-  // useEffect(() => {
-    // test();
-  //   const interval = setInterval(()=> {
-  //     client.refetchQueries({
-  //       include: [gqlQueries.receivedRecords]
-  //     })
-  //     .then((data) => {
-  //       console.log(data)
-  //       // setReceviedRecords(data[0].data.receivedBytes.data.result[0].value[1])
-  //     })
-  //   }, 10000)
+  useEffect(() => {
+
+    const interval = setInterval(()=> {
+      client.refetchQueries({
+        include: "active"
+      })
+      .then((data) => {
+        console.log(data)
+        setReceivedRecords(data[1].data.receivedRecords.data.result[0].value[1])
+      })
+    }, 2000)
   
-  //   return () => clearInterval(interval)
+    return () => clearInterval(interval)
   
-  // },[receivedRecords])
-  
-  // function test (){
-  //   console.log('calling test in records')
-  
-  //   client.query({
-  //     query: gqlQueries.receivedRecords
-  //   })
-  //   .then((data) => {
-  //     console.log(data, 'in records')
-  //       setReceivedRecords(data.data.receivedRecords.data.result[0].value[1])
-  //   })
-  // }
+  },[receivedRecords])
   return(
     <div>
     Received Records
+    <div>{receivedRecords}</div>
     </div>
   )
 }

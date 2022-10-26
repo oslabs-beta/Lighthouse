@@ -11,19 +11,23 @@ import client from "../apollo-client";
 
 
 // Importing graphs
+
+//sus
+import graphdata from './components/Graphs/graphdata.jsx';
+//
+
 import ActiveConnectionCount from "./components/Graphs/ActiveConnectionCount.jsx";
 import ReceivedBytes from "./components/Graphs/ReceivedBytes.jsx";
 import ReceivedRecords from "./components/Graphs/ReceivedRecords.jsx";
 import RetainedBytes from "./components/Graphs/RetainedBytes.jsx";
-import SentBytes from "./components/Graphs/SentBytes.jsx";
-import SentRecords from "./components/Graphs/SentRecords.jsx";
 import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
 import PartitionCount from "./components/Graphs/PartitionCount.jsx";
 import { ConstructionOutlined } from '@mui/icons-material';
 
 
   export default function Home({results}){
-  // console.log(results)
+
+
   return (
     <div className={styles.container}>
       <div id={styles.nav}>
@@ -35,47 +39,33 @@ import { ConstructionOutlined } from '@mui/icons-material';
       <main className={styles.main}>
 
 
-{/* <div className={styles.cardGrid1}>
+{<div className={styles.cardGrid1}>
         
         <div id = {styles.card}>
-         <ActiveConnectionCount/>
+         <ReceivedBytes/>
         </div>
 
        <div id = {styles.card}>
         <RetainedBytes/>
         </div>
 
-</div> */}
+</div> }
 
 
 
 <div className={styles.cardGrid2}>
 
         <div id = {styles.card}>
-        {/* <PartitionCount/> */}
-        {/* {results.partitionCount.data.prometheus.data.result[0].value[1]} */}
+        <PartitionCount/>
         </div>
 
         <div id = {styles.card}>
-        <ReceivedBytes/>
-        {/* {results.receivedBytes.data.receivedBytes.data.result[0].value[1]} */}
+        <ActiveConnectionCount/>
         </div>
         
         <div id = {styles.card}>
         <ReceivedRecords/>
-        {/* {receivedRecords} */}
         </div>
-
-        <div id = {styles.card}>
-        <SentBytes/>
-        {/* {sentBytes} */}
-        </div>
-
-        <div id = {styles.card}>
-        <SentRecords/>
-        {/* {sentRecords} */}
-        {}
-        </div >
 
         <div id = {styles.card}>
         <SuccessfulAuthenticationCount/>
@@ -89,22 +79,7 @@ import { ConstructionOutlined } from '@mui/icons-material';
 
 export async function getStaticProps() {
 const results = {};
-results.partitionCount = await client.query({
-  query: gqlQueries.partitionCount
-})
-// results.receivedBytes = await client.query({
-//   query: gqlQueries.receivedBytes
-// })
-results.sentRecords = await client.query({
-  query: gqlQueries.sentRecords
-})
-results.receivedRecords = await client.query({
-  query: gqlQueries.receivedRecords
-})
-results.authCount = await client.query({
-  query: gqlQueries.authCount
-})
-
+console.log('hi')
   return {
     props: {
       results
