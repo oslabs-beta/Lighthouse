@@ -1,8 +1,11 @@
+.container {
+  max-width: 100%;
+  height: auto;
+}
+
 .container #nav {
   display: flex;
   background: #ABEBDB;
-  width: 100%;
-  height: 50px;
 }
 
 .containter #nav #github {
@@ -13,7 +16,7 @@
   
 }
 
-.main {
+/* .main {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -21,24 +24,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.footer {
+/* .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-}
-
+} */
+/* 
 .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
+} */
+/* 
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -74,15 +77,15 @@
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
+} */
 
-.grid {
+/* .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
-}
+} */
 
 
 .cardGrid1 {
@@ -105,8 +108,8 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  height: 570px;
-  width: 1140px;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .cardGrid2 #card {
@@ -118,9 +121,9 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  height: 200px;
-  width: 700px;
-  font-size: 45px;
+  max-height: 300px;
+  max-width: 700px;
+  font-size: 30px;
   background: #394441;
 }
 
@@ -142,7 +145,7 @@
   font-size: 1.25rem;
   line-height: 1.5;
 }
-
+/* 
 .logo {
   height: 1em;
   margin-left: 0.5rem;
@@ -166,4 +169,4 @@
   .logo img {
     filter: invert(1);
   }
-}
+} */
