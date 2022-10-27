@@ -4,6 +4,7 @@ import { Chart, LinearScale } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import StreamingPlugin from 'chartjs-plugin-streaming';
 import { gql, useQuery } from "@apollo/client";
+import gqlQueries from "../../../queries";
 import client from "../../../apollo-client";
 
 
@@ -21,6 +22,8 @@ let number =  7;
 
 
 function ReceivedBytes() {
+//  const {loading, error, data} = useQuery(gqlQueries.receivedBytes);
+
     return (
     <Line
       data={{

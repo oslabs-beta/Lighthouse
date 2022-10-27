@@ -1,10 +1,11 @@
-
 import React, { useState, useEffect } from "react";
 import 'chartjs-adapter-luxon';
 import { Chart, LinearScale } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import StreamingPlugin from 'chartjs-plugin-streaming';
-
+import { gql, useQuery } from "@apollo/client";
+import gqlQueries from "../../../queries";
+import client from "../../../apollo-client";
 
 Chart.register(StreamingPlugin, LinearScale);
  
@@ -21,6 +22,8 @@ var number;
 
 
 function RetainedBytes() {
+// const {loading, error, data} = useQuery(gqlQueries.retainedBytes);
+
     return (
     <Line
       data={{

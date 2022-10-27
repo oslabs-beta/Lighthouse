@@ -23,9 +23,26 @@ import RetainedBytes from "./components/Graphs/RetainedBytes.jsx";
 import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
 import PartitionCount from "./components/Graphs/PartitionCount.jsx";
 import { ConstructionOutlined } from '@mui/icons-material';
+import { useEffect } from 'react';
 
 
   export default function Home({results}){
+  let fetchResults = [];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      client.refetchQueries({
+        include: "active"
+      })
+      .then((data) => {
+        console.log(data)
+        fetchResults = data;
+        console.log('this is fetch results', fetchResults)
+      })
+    }, 2000)
+      
+    return () => clearInterval(interval)
+  })
 
 
   return (
@@ -42,11 +59,11 @@ import { ConstructionOutlined } from '@mui/icons-material';
 {<div className={styles.cardGrid1}>
         
         <div id = {styles.card}>
-         <ReceivedBytes/>
+         <ReceivedBytes results = {fetchResults}/>
         </div>
 
        <div id = {styles.card}>
-        <RetainedBytes/>
+        <RetainedBytes results = {fetchResults}/>
         </div>
 
 </div> }
@@ -56,19 +73,19 @@ import { ConstructionOutlined } from '@mui/icons-material';
 <div className={styles.cardGrid2}>
 
         <div id = {styles.card}>
-        <PartitionCount/>
+        <PartitionCount results = {fetchResults}/>
         </div>
 
         <div id = {styles.card}>
-        <ActiveConnectionCount/>
+        <ActiveConnectionCount results = {fetchResults}/>
         </div>
         
         <div id = {styles.card}>
-        <ReceivedRecords/>
+        <ReceivedRecords results = {'hi'}/>
         </div>
 
         <div id = {styles.card}>
-        <SuccessfulAuthenticationCount/>
+        <SuccessfulAuthenticationCount results = {fetchResults}/>
         </div>
 
 </div>

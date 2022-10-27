@@ -6,10 +6,13 @@ import client from "../../../apollo-client";
 
 
 
-function SuccessfulAuthenticationCount() {
+function SuccessfulAuthenticationCount(props) {
 const [authCount, setAuthCount] = useState(0);
 const {loading, error, data} = useQuery(gqlQueries.authCount);
-  
+
+useEffect(() => {
+    console.log(props)
+})
 
   return(
     <div>

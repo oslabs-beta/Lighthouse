@@ -26,28 +26,6 @@ query Query {
   }
 }
 `,
-sentBytes: gql`
-query Query {
-  sentBytes {
-    data {
-      result {
-        value
-      }
-    }
-  }
-}
-`,
-sentRecords: gql`
-query Query {
-  sentRecords {
-    data {
-      result {
-        value
-      }
-    }
-  }
-}
-`,
 receivedRecords: gql`
 query Query {
   receivedRecords {
