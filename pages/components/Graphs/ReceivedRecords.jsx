@@ -4,14 +4,15 @@ import { gql, useQuery } from '@apollo/client';
 import client from "../../../apollo-client";
 
 function ReceivedRecords(props) {
-  const [receivedRecords, setReceivedRecords] = useState(0);
   const {loading, error, data} = useQuery(gqlQueries.receivedRecords);
-
+console.log('this is props in records',props)
+  let record = props.results
+  console.log(record, props)
 
   return(
     <div>
     Received Records
-    <div>{receivedRecords}</div>
+    <div> {record ? record : 0}</div>
     </div>
   )
 }

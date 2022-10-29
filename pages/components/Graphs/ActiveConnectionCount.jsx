@@ -3,14 +3,14 @@ import gqlQueries from "../../../queries";
 import { gql, useQuery } from '@apollo/client';
 import client from "../../../apollo-client";
 
-function ActiveConnectionCount() {
-  const [activeConnections, setActiveConnections] = useState(0);
+function ActiveConnectionCount(props) {
   const {loading, error, data} = useQuery(gqlQueries.activeConnections);
 
+  const connectionCount = props.results
   return(
     <div>
     Active Connections
-    <div>{activeConnections}</div>
+    <div>{connectionCount ? connectionCount : 0}</div>
     </div>
   )
 }

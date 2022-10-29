@@ -23,11 +23,16 @@ import RetainedBytes from "./components/Graphs/RetainedBytes.jsx";
 import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
 import PartitionCount from "./components/Graphs/PartitionCount.jsx";
 import { ConstructionOutlined } from '@mui/icons-material';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 
   export default function Home({results}){
-  let fetchResults = [];
+
+  const [receivedRecords, setReceivedRecords] = useState(0);
+  const [prometheus, setPrometheus] = useState(0);
+  const [activeConnectionCount, setActiveConnectionCount] = useState(0);
+  const [successfulAuthCount, setSuccessfulAuthCount] = useState(0);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,13 +40,25 @@ import { useEffect } from 'react';
         include: "active"
       })
       .then((data) => {
-        console.log(data)
-        fetchResults = data;
-        console.log('this is fetch results', fetchResults)
+        data.forEach((element) => {
+          
+          if (element.data.prometheus){
+            setPrometheus(element.data.prometheus.data.result[0].value[1])
+          }
+          else if (element.data.receivedRecords){
+           setReceivedRecords(element.data.receivedRecords.data.result[0].value[1])
+          } 
+          else if (element.data.activeConnectionCount){
+            setActiveConnectionCount(element.data.activeConnectionCount.data.result[0].value[1])
+          }
+          else {
+            setSuccessfulAuthCount(element.data.successfulAuthenticationCount.data.result[0].value[1])
+          }
+        })
       })
-    }, 2000)
+    }, 5000)
       
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   })
 
 
@@ -59,11 +76,11 @@ import { useEffect } from 'react';
 {<div className={styles.cardGrid1}>
         
         <div id = {styles.card}>
-         <ReceivedBytes results = {fetchResults}/>
+         <ReceivedBytes />
         </div>
 
        <div id = {styles.card}>
-        <RetainedBytes results = {fetchResults}/>
+        <RetainedBytes />
         </div>
 
 </div> }
@@ -73,19 +90,19 @@ import { useEffect } from 'react';
 <div className={styles.cardGrid2}>
 
         <div id = {styles.card}>
-        <PartitionCount results = {fetchResults}/>
+        <PartitionCount results = {prometheus}/>
         </div>
 
         <div id = {styles.card}>
-        <ActiveConnectionCount results = {fetchResults}/>
+        <ActiveConnectionCount results = {activeConnectionCount}/>
         </div>
         
         <div id = {styles.card}>
-        <ReceivedRecords results = {'hi'}/>
+        <ReceivedRecords results = {receivedRecords}/>
         </div>
 
         <div id = {styles.card}>
-        <SuccessfulAuthenticationCount results = {fetchResults}/>
+        <SuccessfulAuthenticationCount results = {successfulAuthCount}/>
         </div>
 
 </div>

@@ -7,17 +7,15 @@ import client from "../../../apollo-client";
 
 
 function SuccessfulAuthenticationCount(props) {
-const [authCount, setAuthCount] = useState(0);
-const {loading, error, data} = useQuery(gqlQueries.authCount);
 
-useEffect(() => {
-    console.log(props)
-})
+const {loading, error, data} = useQuery(gqlQueries.authCount);
+// const count = props?.results[0]?.data?.prometheus?.data?.result[0]?.value[1];
+
 
   return(
     <div>
       <div>Successful Authentication Count</div>
-      {authCount}
+      {props.results}
     </div>
   )
 }

@@ -6,18 +6,15 @@ import client from "../../../apollo-client";
 
 
 
-function PartitionCount() {
-const [partitionCount, setPartitionCount] = useState(0);
+function PartitionCount(props) {
 const {loading, error, data} = useQuery(gqlQueries.partitionCount);
-  
-useEffect(() => {
-  
-})
+
+const count = props.results;
 
   return(
     <div>
       <div>Partition Count</div>
-      {partitionCount}
+      {count}
     </div>
   )
 }

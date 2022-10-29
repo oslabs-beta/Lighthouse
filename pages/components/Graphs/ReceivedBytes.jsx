@@ -12,18 +12,19 @@ Chart.register(StreamingPlugin);
  
 
 // every 1000ms, checking prometheus for an updated metric that will be displayed on the y-axis
-let number =  7;
+// let number =  7;
 
-(function repeat() {
+// (function repeat() {
 
-   number = Math.random();
-   setTimeout(repeat, 1000);
-})();
+//    number = Math.random();
+//    setTimeout(repeat, 1000);
+// })();
 
 
-function ReceivedBytes() {
+function ReceivedBytes(props) {
 //  const {loading, error, data} = useQuery(gqlQueries.receivedBytes);
 
+ 
     return (
     <Line
       data={{
@@ -44,9 +45,11 @@ function ReceivedBytes() {
               delay: 1000,
               onRefresh: chart => {
                 chart.data.datasets.forEach(dataset => {
+                  console.log(props);
                   dataset.data.push({
                     x: Date.now(),
-                    y: number
+                    // y: props?.results[4]?.data?.receivedBytes?.data?.result[0]?.value[1]
+                    y: 1
                   });
                 });
               }
