@@ -32,9 +32,6 @@ export default function Home({ countries }) {
     <NavBar />
       <main className={styles.main}>
 
-
-
-
 <div className={styles.cardGrid1}>
         
         <div id = {styles.graph1}>
