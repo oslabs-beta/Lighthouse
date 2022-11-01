@@ -44,8 +44,6 @@ export default function Home({ countries }) {
 
 </div>
 
-
-
 <div className={styles.cardGrid2}>
 
         <div id = {styles.card}>
