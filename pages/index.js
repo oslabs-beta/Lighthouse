@@ -26,13 +26,12 @@ import { ConstructionOutlined } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 
 
-  export default function Home({results}){
+export default function Home({results}){
 
   const [receivedRecords, setReceivedRecords] = useState(0);
   const [prometheus, setPrometheus] = useState(0);
   const [activeConnectionCount, setActiveConnectionCount] = useState(0);
   const [successfulAuthCount, setSuccessfulAuthCount] = useState(0);
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,13 +44,13 @@ import { useEffect, useState } from 'react';
           if (element.data.prometheus){
             setPrometheus(element.data.prometheus.data.result[0].value[1])
           }
-          else if (element.data.receivedRecords){
+          if (element.data.receivedRecords){
            setReceivedRecords(element.data.receivedRecords.data.result[0].value[1])
           } 
-          else if (element.data.activeConnectionCount){
+          if (element.data.activeConnectionCount){
             setActiveConnectionCount(element.data.activeConnectionCount.data.result[0].value[1])
           }
-          else {
+          if (element.data.successfulAuthenticationCount){
             setSuccessfulAuthCount(element.data.successfulAuthenticationCount.data.result[0].value[1])
           }
         })
@@ -59,8 +58,7 @@ import { useEffect, useState } from 'react';
     }, 5000)
       
     return () => clearInterval(interval);
-  })
-
+  },[])
 
   return (
     <div className={styles.container}>
@@ -73,7 +71,7 @@ import { useEffect, useState } from 'react';
       <main className={styles.main}>
 
 
-{<div className={styles.cardGrid1}>
+    {<div className={styles.cardGrid1}>
         
         <div id = {styles.card}>
          <ReceivedBytes />
@@ -83,7 +81,7 @@ import { useEffect, useState } from 'react';
         <RetainedBytes />
         </div>
 
-</div> }
+    </div> }
 
 
 
@@ -111,14 +109,12 @@ import { useEffect, useState } from 'react';
   )
 }
 
-export async function getStaticProps() {
-const results = {};
-console.log('hi')
-  return {
-    props: {
-      results
-    },
- };
-}
-
-
+// export async function getStaticProps() {
+// const results = {};
+// console.log('hi')
+//   return {
+//     props: {
+//       results
+//     },
+//  };
+// }

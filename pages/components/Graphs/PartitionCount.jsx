@@ -3,9 +3,6 @@ import { useEffect, useState } from "react";
 import { gql, useQuery } from '@apollo/client';
 import client from "../../../apollo-client";
 
-
-
-
 function PartitionCount(props) {
 const {loading, error, data} = useQuery(gqlQueries.partitionCount);
 
@@ -19,6 +16,4 @@ const count = props.results;
   )
 }
 
-
-
-  module.exports = PartitionCount
+module.exports = PartitionCount
