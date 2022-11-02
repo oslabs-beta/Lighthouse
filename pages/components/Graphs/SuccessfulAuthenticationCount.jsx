@@ -1,63 +1,63 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
-import {
-    Chart as ChartJS,
-    ArcElement,
-  LineElement,
-  BarElement,
-  PointElement,
-  BarController,
-  BubbleController,
-  DoughnutController,
-  LineController,
-  PieController,
-  PolarAreaController,
-  RadarController,
-  ScatterController,
-  CategoryScale,
-  LinearScale,
-  LogarithmicScale,
-  RadialLinearScale,
-  TimeScale,
-  TimeSeriesScale,
-  Decimation,
-  Filler,
-  Legend,
-  Title,
-  Tooltip,
-  SubTitle
+// import {
+//     Chart as ChartJS,
+//     ArcElement,
+//   LineElement,
+//   BarElement,
+//   PointElement,
+//   BarController,
+//   BubbleController,
+//   DoughnutController,
+//   LineController,
+//   PieController,
+//   PolarAreaController,
+//   RadarController,
+//   ScatterController,
+//   CategoryScale,
+//   LinearScale,
+//   LogarithmicScale,
+//   RadialLinearScale,
+//   TimeScale,
+//   TimeSeriesScale,
+//   Decimation,
+//   Filler,
+//   Legend,
+//   Title,
+//   Tooltip,
+//   SubTitle
 
-  } from 'chart.js';
+//   } from 'chart.js';
 
-  import { Line } from "react-chartjs-2"
+//   import { Line } from "react-chartjs-2"
   
-  ChartJS.register(
-    ArcElement,
-  LineElement,
-  BarElement,
-  PointElement,
-  BarController,
-  BubbleController,
-  DoughnutController,
-  LineController,
-  PieController,
-  PolarAreaController,
-  RadarController,
-  ScatterController,
-  CategoryScale,
-  LinearScale,
-  LogarithmicScale,
-  RadialLinearScale,
-  TimeScale,
-  TimeSeriesScale,
-  Decimation,
-  Filler,
-  Legend,
-  Title,
-  Tooltip,
-  SubTitle
+//   ChartJS.register(
+//     ArcElement,
+//   LineElement,
+//   BarElement,
+//   PointElement,
+//   BarController,
+//   BubbleController,
+//   DoughnutController,
+//   LineController,
+//   PieController,
+//   PolarAreaController,
+//   RadarController,
+//   ScatterController,
+//   CategoryScale,
+//   LinearScale,
+//   LogarithmicScale,
+//   RadialLinearScale,
+//   TimeScale,
+//   TimeSeriesScale,
+//   Decimation,
+//   Filler,
+//   Legend,
+//   Title,
+//   Tooltip,
+//   SubTitle
 
-  );
+//   );
 
 function randomIntFromInterval(min, max) { // min and max included 
   return Math.floor(Math.random() * (max - min + 1) + min)

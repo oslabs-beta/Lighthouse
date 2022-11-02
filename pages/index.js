@@ -8,6 +8,23 @@ import client from "../apollo-client";
 // Importing Navbar
 // import SearchAppBar from "./components/Navbar/navbar.jsx"
 
+import {
+  Chart as ChartJS,
+LineElement,
+PointElement,
+PolarAreaController,
+Filler,
+Legend,
+} from 'chart.js';
+
+ChartJS.register(
+LineElement,
+PointElement,
+PolarAreaController,
+Legend,
+Filler,
+);
+
 
 // Importing graphs
 import ActiveConnectionCount from "./components/Graphs/ActiveConnectionCount.jsx";
@@ -29,7 +46,6 @@ export default function Home({ countries }) {
         <h1 id={styles.profile}>Profile</h1>
       </div>
 
-      <main className={styles.main}>
 
 <div className={styles.cardGrid1}>
         
@@ -77,9 +93,8 @@ export default function Home({ countries }) {
         <SuccessfulAuthenticationCount/>
         0
         </div>
-
 </div>
-      </main>
+
     </div>
   )
 }
