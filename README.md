@@ -44,11 +44,16 @@ A minimal GUI provides clear visualization of cluster peformance and health. Use
 
 # Getting Started
 
+Before using the application, the user should have a Confluent Kafka cluster up and running, as well as a Prometheus server connected. AFterwards, it's as easy as inputting the Prometheus endpoint into the application.
+
+1. Install
 ```javascript
 npm install;
 npm run build;
 npm start;
 ```
+2. Confluent Cloud kafka cluster setup (https://developer.confluent.io/quickstart/kafka-on-confluent-cloud/)
+3. Prometheus Server setup (https://developer.confluent.io/)
 
 
 ## Under The Hood
