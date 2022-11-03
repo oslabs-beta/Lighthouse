@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
@@ -35,25 +35,20 @@ import SentBytes from "./components/Graphs/SentBytes.jsx";
 import SentRecords from "./components/Graphs/SentRecords.jsx";
 import SuccessfulAuthenticationCount from "./components/Graphs/SuccessfulAuthenticationCount.jsx";
 import PartitionCount from "./components/Graphs/PartitionCount.jsx";
+import NavBar from "./components/Navbar/navbar"
 
 
 export default function Home({ countries }) {
   return (
     <div className={styles.container}>
-      <div id={styles.nav}>
-        <h1 id={styles.title}>Lighthouse</h1>
-        <h1 id={styles.github}>Github</h1>
-        <h1 id={styles.profile}>Profile</h1>
-      </div>
-
-
+      <NavBar />
 <div className={styles.cardGrid1}>
         
-        <div id = {styles.card}>
+        <div id = {styles.graph1}>
          <ActiveConnectionCount/>
         </div>
 
-       <div id = {styles.card}>
+       <div id = {styles.graph1}>
         <RetainedBytes/>
         </div>
 
