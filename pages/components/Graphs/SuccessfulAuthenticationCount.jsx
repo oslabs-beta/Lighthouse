@@ -1,24 +1,23 @@
-function randomIntFromInterval(min, max) { // min and max included 
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-const dummyData = []
-
-let x = (randomIntFromInterval(10, 1000))
-let y = (randomIntFromInterval(10, 1000))
-let z = (randomIntFromInterval(10, 1000))
-let a = (randomIntFromInterval(10, 1000))
+import gqlQueries from "../../../queries";
+import { useEffect, useState } from "react";
+import { gql, useQuery } from '@apollo/client';
+import client from "../../../apollo-client";
 
 
-function SuccessfulAuthenticationCount() {
+
+
+function SuccessfulAuthenticationCount(props) {
+
+const {loading, error, data} = useQuery(gqlQueries.authCount);
 
   return(
     <div>
-    Successful Authentication Count
+      <div>Successful Authentication Count</div>
+      {props.results}
     </div>
   )
 }
 
 
 
-  module.exports = SuccessfulAuthenticationCount
+  module.exports = SuccessfulAuthenticationCount;
