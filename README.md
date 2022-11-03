@@ -8,7 +8,7 @@
 <a href="https://github.com/oslabs-beta/Lighthouse/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/oslabs-beta/Lighthouse"></a>
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oslabs-beta/Lighthouse">
 
-<strong> A minimal, light-weight Kafka cluster monitoring and data management tool. </strong> 
+<strong> A minimal, light-weight Kafka cluster monitoring tool built on Next.js. </strong> 
 </div>
 
  
@@ -31,6 +31,9 @@ Lighthouse is a lightweight, open-source developer tool useful for monitoring Ka
 
   Lighthouse is a <strong>typescript-built, open-source developer tool</strong> that utilizies a predefined set of graphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a flexible graphical interface. This interface is customizable, allowing for a dynamic display of metrics that are important to each specific user.
 
+<p align="center">
+<img src="https://gyazo.com/fad5e655afbd75d536aa385484d5bce2"/>
+</p>
 
 
 ## Monitoring
