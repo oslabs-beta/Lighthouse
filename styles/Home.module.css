@@ -8,15 +8,6 @@
   background: #ABEBDB;
 }
 
-.containter #nav #github {
-
-}
-
-.containter #nav #profile {
-  
-}
-
-/* .main {
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -84,18 +75,23 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
-} */
+
 
 
 .cardGrid1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  min-width: 1800px;
+  min-height: 500px;
 }
 
 .cardGrid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 
@@ -108,8 +104,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-height: 100%;
-  max-width: 100%;
+
 }
 
 .cardGrid2 #card {
@@ -121,8 +116,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-height: 300px;
-  max-width: 700px;
+
   font-size: 30px;
   background: #394441;
 }
