@@ -72,7 +72,7 @@ npm start;
 
 <table align="center"><tbody><tr>
   <td align="center" width="150">
-    <img src="https://github.com/oslabs-beta/Lighthouse/blob/main/GithubImages/Andy-profile-pic.jpg" style="height: 5rem; width: 5rem;" />
+    <img src="https://github.com/oslabs-beta/Lighthouse/blob/main/GithubImages/andy-profile-pic.jpg" style="height: 5rem; width: 5rem;" />
     <br/>
     <strong>Andy Kuang</strong>
     <br/>
