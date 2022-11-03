@@ -12,15 +12,12 @@
 </div>
 
  
-Lighthouse is a lightweight, open-source developer tool useful for visualizing and managing Kafka clusters - in <strong>real</strong> time. It provides a dashboard view of essential performance metrics for monitoring Kafka cluster health, allows for topic management within clusters, and integrates performance comparisons based on historical data.
+Lighthouse is a lightweight, open-source developer tool useful for monitoring Kafka clusters - in <strong>real</strong> time. It provides a responsive dashboard view of essential performance metrics for visualizing Kafka cluster health.
 
 
 ## Table of Contents
 
 1. [How It Works](#how-it-works)
-   - [Monitoring](#monitoring)
-   - [Writability](#writability)
-   - [Performance Comparison](#performance-comparison)
 1. [Getting Started](#getting-started)
    - [Requirements](#requirements)
    - [Installation](#installation)
@@ -38,16 +35,8 @@ Lighthouse is a lightweight, open-source developer tool useful for visualizing a
 
 ## Monitoring
 
-A minimal GUI provides clear and custom visualization of cluster peformance and health. Users are able to see what they want to see, how they want to see it - performance can be represented in several ways, including scatter plots, pie charts, or traditional graphs.
+A minimal GUI provides clear visualization of cluster peformance and health. Users are able to get the information they need immediately, allowing for on-time system predictions and decisions.
 
-## Writability
-
-Topics can be directly accessed and manipulated within the cluster via a write feature that manages cluster information.
-
-
-## Performance Comparison
-
-Utilizing an import and export feature, Lighthouse allows for current metrics to be exported and external metrics to be imported. A comparison tool allows for these metrics at different instances to be compared side-by-side for immediate diagnostics of cluster health.
 
 
 # Getting Started
