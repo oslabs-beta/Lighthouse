@@ -1,8 +1,11 @@
+.container {
+  max-width: 100%;
+  height: auto;
+}
+
 .container #nav {
   display: flex;
   background: #ABEBDB;
-  width: 100%;
-  height: 50px;
 }
 
 .containter #nav #github {
@@ -13,32 +16,79 @@
   
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.cardGrid1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.footer {
+.cardGrid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.cardGrid1 #card {
+  margin: 1rem;
+  padding: 1.5rem; 
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.cardGrid2 #card {
+  margin: 2.8rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-height: 300px;
+  max-width: 700px;
+  font-size: 30px;
+  background: #394441;
+}
+
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+/* .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-}
-
+} */
+/* 
 .footer a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
-
+} */
+/* 
 .title a {
   color: #0070f3;
   text-decoration: none;
@@ -74,25 +124,30 @@
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
+} */
 
-.grid {
+/* .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
-}
+
 
 
 .cardGrid1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  min-width: 1800px;
+  min-height: 500px;
 }
 
 .cardGrid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 
@@ -105,8 +160,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  height: 570px;
-  width: 1140px;
+
 }
 
 .cardGrid2 #card {
@@ -118,9 +172,8 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  height: 200px;
-  width: 700px;
-  font-size: 45px;
+
+  font-size: 30px;
   background: #394441;
 }
 
@@ -142,7 +195,7 @@
   font-size: 1.25rem;
   line-height: 1.5;
 }
-
+/* 
 .logo {
   height: 1em;
   margin-left: 0.5rem;
@@ -166,4 +219,4 @@
   .logo img {
     filter: invert(1);
   }
-}
+} */

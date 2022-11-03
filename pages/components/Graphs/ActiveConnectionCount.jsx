@@ -15,6 +15,4 @@ function ActiveConnectionCount(props) {
   )
 }
 
-
-
   module.exports = ActiveConnectionCount
