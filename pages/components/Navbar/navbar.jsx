@@ -26,9 +26,9 @@ export default function ResponsiveAppBar() {
 
   return (
     <AppBar position="static" style={{backgroundColor: '#aceed9'}}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" >
         <Toolbar disableGutters>
-          <Image  src={LighthouseLogo} alt='logo display' sx={{ display: { width: 20, xs: 'none', md: 'container' }, mr: 1 }} />
+          <Image  src={LighthouseLogo} alt='logo display' sx={{ display: { width: 200, xs: 'none', md: 'container' }, mr: 1 }} />
           <Typography
             variant="h4"
             noWrap

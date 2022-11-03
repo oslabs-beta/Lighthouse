@@ -44,11 +44,11 @@ export default function Home({ countries }) {
       <NavBar />
 <div className={styles.cardGrid1}>
         
-        <div id = {styles.graph1}>
+        <div id = {styles.card}>
          <ActiveConnectionCount/>
         </div>
 
-       <div id = {styles.graph1}>
+       <div id = {styles.card}>
         <RetainedBytes/>
         </div>
 
