@@ -26,28 +26,26 @@ export default function ResponsiveAppBar() {
 
   return (
     <AppBar position="static" style={{backgroundColor: '#aceed9'}}>
-      <Container maxWidth="xl" >
-        <Toolbar disableGutters>
+
+      <Container maxWidth="xl" sx={{ m: 0}} >
+        <Toolbar disableGutters sx={{ display: {position: "flex" }}}>
+
           <Image  src={LighthouseLogo} alt='logo display' sx={{ display: { width: 200, xs: 'none', md: 'container' }, mr: 1 }} />
           <Typography
             variant="h4"
-            noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: {},
               fontFamily: 'Helvetica',
               fontWeight: 450,
               letterSpacing: '0.5rem',
               color: 'black',
               textDecoration: 'none',
             }}
-          >
-            Lighthouse
+          >Lighthouse
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -62,9 +60,6 @@ export default function ResponsiveAppBar() {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -78,7 +73,7 @@ export default function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleOpenNavMenu}
-                sx={{ my: 1, color: 'black', display: 'block' }}
+                sx={{ my: 1, color: 'black', display: 'block'}}
               >
                 {page}
               </Button>
@@ -86,6 +81,7 @@ export default function ResponsiveAppBar() {
           </Box>
         </Toolbar>
       </Container>
+
     </AppBar>
   );
 };
