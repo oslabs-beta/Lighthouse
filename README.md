@@ -19,9 +19,6 @@ Lighthouse is a lightweight, open-source developer tool useful for monitoring Ka
 
 1. [How It Works](#how-it-works)
 1. [Getting Started](#getting-started)
-   - [Requirements](#requirements)
-   - [Installation](#installation)
-   - [Prometheus Server](#prometheus-server)
 1. [Under the Hood](#under-the-hood)
 1. [Contributors](#contributors)
 1. [License](#license)
