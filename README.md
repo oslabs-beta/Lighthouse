@@ -20,11 +20,12 @@ Lighthouse is a lightweight, open-source developer tool useful for monitoring Ka
 1. [How It Works](#how-it-works)
 1. [Getting Started](#getting-started)
 1. [Under the Hood](#under-the-hood)
+1. [Stretch Goals](#stretch-goals)
 1. [Contributors](#contributors)
 1. [License](#license)
 
 
-# How It Works
+## How It Works
 
   Lighthouse is a <strong>typescript-built, open-source developer tool</strong> that utilizies a predefined set of graphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a flexible graphical interface. This interface is customizable, allowing for a dynamic display of metrics that are important to each specific user.
 
@@ -35,11 +36,11 @@ Lighthouse is a lightweight, open-source developer tool useful for monitoring Ka
 
 ## Monitoring
 
-A minimal GUI provides clear visualization of cluster peformance and health. Users are able to get the information they need immediately, allowing for on-time system predictions and decisions.
+A minimal GUI provides clear visualization of cluster peformance and health. Users are able to get the information they need, when they need it, allowing for on-time system predictions and decisions. 
 
 
 
-# Getting Started
+## Getting Started
 
 Before using the application, the user should have a Confluent Kafka cluster up and running, as well as a Prometheus server connected. AFterwards, it's as easy as inputting the Prometheus endpoint into the application.
 
@@ -50,7 +51,7 @@ npm run build;
 npm start;
 ```
 2. Confluent Cloud kafka cluster setup (https://developer.confluent.io/quickstart/kafka-on-confluent-cloud/)
-3. Prometheus Server setup (https://developer.confluent.io/)
+3. Prometheus Server setup (https://prometheus.io/)
 4. Create a process.env and input your Prometheus endpoint.
 
 
@@ -63,6 +64,12 @@ Built with Next.js, GraphQL, Apollo, and Prometheus, with plans to refactor into
 <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg" title="NextJS" alt="NextJS" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="50" height="40"/>&nbsp;
 </p>
+
+## Stretch Goals
+- Typescript Codebase
+- Prometheus Endpoint input feature
+- Customizable graphical components
+- Docker Containerization
 
 ## Contributors
 We are always open to collaborating and building together! Reach out with features you'd like to see.
