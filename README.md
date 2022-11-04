@@ -51,22 +51,21 @@ npm start;
 ```
 2. Confluent Cloud kafka cluster setup (https://developer.confluent.io/quickstart/kafka-on-confluent-cloud/)
 3. Prometheus Server setup (https://developer.confluent.io/)
+4. Create a process.env and input your Prometheus endpoint.
 
 
 ## Under The Hood
-
+Built with Next.js, GraphQL, Apollo, and Prometheus, with plans to refactor into Typescript.
 <p align="center">
 <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-original-wordmark.svg" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/graphql/graphql-plain-wordmark.svg" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="Typescript" alt="Typescript" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg" title="NextJS" alt="NextJS" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="50" height="40"/>&nbsp;
-<img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original-wordmark.svg" title="Express" alt="Express" width="50" height="40"/>&nbsp;
-<img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="50" height="40"/>&nbsp;
 </p>
 
 ## Contributors
-
+We are always open to collaborating and building together! Reach out with features you'd like to see.
 <table align="center"><tbody><tr>
   <td align="center" width="150">
     <img src="https://github.com/oslabs-beta/Lighthouse/blob/main/GithubImages/andy-profile-pic.jpg" style="height: 5rem; width: 5rem;" />
