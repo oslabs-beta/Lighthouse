@@ -27,7 +27,7 @@ Lighthouse is a lightweight, open-source developer tool useful for monitoring Ka
 
 ## How It Works
 
-  Lighthouse is a <strong>typescript-built, open-source developer tool</strong> that utilizies a predefined set of GraphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a minimal graphical interface. With the goal of capitalizing on Kafka's on-demand consumer threading, which gives immediate access to the producer threads, Lighthouse's goal is to provide the developer with immediate metrics to allow for on-time system analysis and predictions. Appropriate tech was chosen with this in mind.
+  Lighthouse is a <strong> (soon-to-be) typescript-built, open-source developer tool</strong> that utilizies a predefined set of GraphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a minimal graphical interface. With the goal of capitalizing on Kafka's on-demand consumer threading, which gives immediate access to the producer threads, Lighthouse's goal is to provide the developer with immediate metrics to allow for on-time system analysis and predictions. Appropriate tech was chosen with this in mind.
 
 <p align="center">
 <img src="https://github.com/oslabs-beta/Lighthouse/blob/main/GithubImages/lighthouse-demo.gif"/>
