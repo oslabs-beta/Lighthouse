@@ -29,7 +29,7 @@ Soon to be Typescript-built & containerized with Docker.
 
 ## How It Works
 
-  Lighthouse helps you see metrics that matter by utilizing a predefined set of GraphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a minimal graphical interface. With the goal of capitalizing on Kafka's on-demand consumer threading, which gives immediate access to the producer threads, Lighthouse's goal is to provide the developer with immediate metrics to allow for on-time system analysis and predictions. 
+  Lighthouse helps you see metrics that matter by utilizing a predefined set of GraphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a minimal graphical interface. With the goal of capitalizing on Kafka's on-demand consumer threading, which gives immediate access to the producer threads, Lighthouse's goal is to provide the developer with immediate, on-time metrics to allow for on-time system analysis and predictions. 
 
 <p align="center">
 <img src="https://github.com/oslabs-beta/Lighthouse/blob/main/GithubImages/lighthouse-demo.gif"/>
