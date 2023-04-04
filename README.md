@@ -6,7 +6,6 @@
 <a href="https://github.com/oslabs-beta/Lighthouse"><img src="https://img.shields.io/badge/license-MIT-blue"/></a>
 <a href="https://github.com/oslabs-beta/Lighthouse/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/oslabs-beta/Lighthouse"></a>
 <a href="https://github.com/oslabs-beta/Lighthouse/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/oslabs-beta/Lighthouse"></a>
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oslabs-beta/Lighthouse">
 
 <strong> A minimal, light-weight Kafka cluster monitoring tool built on Next.js. </strong> 
 </div>
