@@ -8,26 +8,18 @@ import gqlQueries from "../../../queries";
 import client from "../../../apollo-client";
 
 Chart.register(StreamingPlugin, LinearScale);
- 
 
-// every 1000ms, checking prometheus for an updated metric that will be displayed on the y-axis
 var number;
-
-// (function repeat() {
-//    number = Math.random();
-//    setTimeout(repeat, 1000);
-// })();
 
 (function repeat() {
   let date = Math.floor((new Date().getTime()/1000)) - 500;
   fetch(`http://34.162.127.11:9090/api/v1/query?query=confluent_kafka_server_retained_bytes&time=${date}`)
   .then((response) => response.json())
-  .then((data) => number = data.data.result[1].value[1]) //console.log("this is the data: ", data))
+  .then((data) => number = data.data.result[1].value[1]) 
   setTimeout(repeat, 1000);
 })();
 
 function RetainedBytes() {
-// const {loading, error, data} = useQuery(gqlQueries.retainedBytes);
 
     return (
     <Line
@@ -64,4 +56,3 @@ function RetainedBytes() {
 };
 
 export default React.memo(RetainedBytes);
-// module.exports = RetainedBytes
