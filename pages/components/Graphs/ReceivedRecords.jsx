@@ -5,9 +5,7 @@ import client from "../../../apollo-client";
 
 function ReceivedRecords(props) {
   const {loading, error, data} = useQuery(gqlQueries.receivedRecords);
-console.log('this is props in records',props)
   let record = props.results
-  console.log(record, props)
 
   return(
     <div>
@@ -17,6 +15,4 @@ console.log('this is props in records',props)
   )
 }
 
-
-
-  module.exports = ReceivedRecords
+module.exports = ReceivedRecords

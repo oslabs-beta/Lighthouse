@@ -1,12 +1,8 @@
 import Head from 'next/head'
-
 import styles from '../styles/Home.module.css'
 import gqlQueries from '../queries';
 import { gql, useQuery } from "@apollo/client";
 import client from "../apollo-client";
-
-
-// Importing Navbar
 import NavBar from "./components/Navbar/navbar"
 import graphdata from './components/Graphs/graphdata.jsx';
 import ActiveConnectionCount from "./components/Graphs/ActiveConnectionCount.jsx";
