@@ -11,9 +11,9 @@
 </div>
 
  
-Lighthouse is a lightweight, open-source developer tool useful for monitoring Kafka clusters - in <strong>real</strong> time. It provides a responsive dashboard view of essential performance metrics for visualizing Kafka cluster health.
+Lighthouse is a lightweight, open-source developer tool useful for monitoring Kafka clusters - in <strong>real</strong> time. It provides a responsive dashboard view of essential performance metrics for visualizing Kafka cluster health. 
 
-Soon to be Typescript-built & containerized with Docker.
+Soon to be Typescript integrated.
 
 
 ## Table of Contents
@@ -49,14 +49,26 @@ npm start;
 3. Prometheus Server setup (https://prometheus.io/)
 4. Create a process.env and input your Prometheus endpoint.
 
+To run Lighthouse within a Docker container based on the image provided, follow these steps.
+
+1. Build Docker Image
+```javascript
+docker build -t lighthouse-app .
+```
+2. Run the image as a Docker container
+```javascript
+docker run -p 3000:3000 lighthouse-app
+```
+
 
 ## Under The Hood
-Built with Next.js, GraphQL, Apollo, and Prometheus, with plans to refactor into Typescript.
+Built with Next.js, GraphQL, Apollo, and Prometheus, with plans to refactor into Typescript. Containerization provided by Docker.
 <p align="center">
 <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-original-wordmark.svg" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/graphql/graphql-plain-wordmark.svg" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="Typescript" alt="Typescript" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original-wordmark.svg" title="NextJS" alt="NextJS" width="50" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker" alt="Docker" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="50" height="40"/>&nbsp;
 </p>
 
