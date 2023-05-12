@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import gqlQueries from "../../../queries";
-import { gql, useQuery } from '@apollo/client';
-import client from "../../../apollo-client";
+import gqlQueries from "../../queries.jsx";
+import { useQuery } from '@apollo/client';
+
 
 function ReceivedRecords(props) {
   const {loading, error, data} = useQuery(gqlQueries.receivedRecords);

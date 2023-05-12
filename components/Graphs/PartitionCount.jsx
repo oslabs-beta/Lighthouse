@@ -1,7 +1,5 @@
-import gqlQueries from "../../../queries";
-import { useEffect, useState } from "react";
-import { gql, useQuery } from '@apollo/client';
-import client from "../../../apollo-client";
+import gqlQueries from "../../queries.jsx";
+import { useQuery } from '@apollo/client';
 
 function PartitionCount(props) {
 const {loading, error, data} = useQuery(gqlQueries.partitionCount);

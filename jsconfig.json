@@ -13,8 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.js", "pages/_app.js", "pages/api/hello.js", "cypress.config.js", "cypress/e2e/lighthouse.cy.js", "cypress/e2e/spec.cy.js", "cypress/support/commands.js", "cypress/support/e2e.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.js", "pages/_app.js", "pages/api/hello.js", "cypress.config.js", "cypress/e2e/lighthouse.cy.js", "cypress/e2e/spec.cy.js", "cypress/support/commands.js", "cypress/support/e2e.js", "queries.jsx"],
   "exclude": ["node_modules"]
 }
