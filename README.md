@@ -47,15 +47,16 @@ npm start;
 ```
 2. Confluent Cloud kafka cluster setup (https://developer.confluent.io/quickstart/kafka-on-confluent-cloud/)
 3. Prometheus Server setup (https://prometheus.io/)
-4. Create a process.env and input your Prometheus endpoint.
+4. Create a process.env and input your Prometheus endpoints corresponding to the API variables within the components.
 
 To run Lighthouse within a Docker container based on the image provided, follow these steps.
 
-1. Build Docker Image
+1. Open Docker (make sure local Docker client is up to date with the latest version)
+2. Build Docker Image
 ```javascript
 docker build -t lighthouse-app .
 ```
-2. Run the image as a Docker container
+3. Run the image as a Docker container
 ```javascript
 docker run -p 3000:3000 lighthouse-app
 ```
