@@ -1,7 +1,5 @@
 import {gql} from "@apollo/client";
 
-//list of queries to be utilized via graphql to retrieve data from prometheus.
-
 const gqlQueries = {
 
 partitionCount: gql`

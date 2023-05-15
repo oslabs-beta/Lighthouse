@@ -6,11 +6,12 @@ import StreamingPlugin from 'chartjs-plugin-streaming';
 
 Chart.register(StreamingPlugin, LinearScale);
 
-var number;
+let number;
+let API = process.env.RETAINEDBYTES_API;
 
 (function repeat() {
   let date = Math.floor((new Date().getTime()/1000)) - 500;
-  fetch(`http://34.162.127.11:9090/api/v1/query?query=confluent_kafka_server_retained_bytes&time=${date}`)
+  fetch(API)
   .then((response) => response.json())
   .then((data) => number = data.data.result[1].value[1]) 
   setTimeout(repeat, 1000);
