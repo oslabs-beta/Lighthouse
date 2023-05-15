@@ -28,7 +28,7 @@ Soon to be Typescript integrated.
 
 ## How It Works
 
-  Lighthouse helps you see metrics that matter by utilizing a predefined set of GraphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a minimal graphical interface. With the goal of capitalizing on Kafka's on-demand consumer threading, which gives immediate access to the producer threads, Lighthouse's goal is to provide the developer with immediate, on-time metrics to allow for on-time system analysis and predictions. 
+  Lighthouse helps you see metrics that matter by utilizing a predefined set of GraphQL parameters to query a Prometheus server, allowing Kafka cluster usage data to directly render in a minimal graphical interface. With the goal of capitalizing on Kafka's on-demand consumer threading, which gives immediate access to the producer threads, Lighthouse's goal is to provide the developer with on-time metrics to allow for immediate system analysis. 
 
 <p align="center">
 <img src="https://github.com/oslabs-beta/Lighthouse/blob/main/GithubImages/lighthouse-demo.gif"/>
@@ -37,7 +37,7 @@ Soon to be Typescript integrated.
 
 ## Getting Started
 
-Before using the application, the user should have a Confluent Kafka cluster up and running, as well as a Prometheus server connected. AFterwards, it's as easy as inputting the Prometheus endpoint into the application.
+Before using the application, the user should have a Confluent Kafka cluster up and running, as well as a Prometheus server connected. Afterwards, it's as easy as inputting the Prometheus endpoint into your process.env variables.
 
 1. Install
 ```javascript
@@ -62,7 +62,7 @@ docker run -p 3000:3000 lighthouse-app
 
 
 ## Under The Hood
-Built with Next.js, GraphQL, Apollo, and Prometheus, with plans to refactor into Typescript. Containerization provided by Docker.
+Built with Next.js, GraphQL, Apollo, Prometheus, and Docker. Containerization provided by Docker.
 <p align="center">
 <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-original-wordmark.svg" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/graphql/graphql-plain-wordmark.svg" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
@@ -76,7 +76,6 @@ Built with Next.js, GraphQL, Apollo, and Prometheus, with plans to refactor into
 - Typescript Codebase
 - Prometheus Endpoint input feature
 - Customizable graphical components
-- Docker Containerization
 
 ## Contributors
 We are always open to collaborating and building together! Reach out with features you'd like to see.
