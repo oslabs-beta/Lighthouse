@@ -4,16 +4,14 @@ import { Chart } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import StreamingPlugin from 'chartjs-plugin-streaming';
 
-
-
 Chart.register(StreamingPlugin);
  
 let number;
-let API = process.env.RECEIVEDBYTES_API;
+let RECEIVEDBYTES_API = `${process.env.PROMETHEUS_API}/api/v1/query?query=confluent_kafka_server_received_bytes&time=${date}`;
 
 (function repeat() {
   let date = Math.floor((new Date().getTime()/1000)) - 500;
-  fetch(API)
+  fetch(RECEIVEDBYTES_API)
   .then((response) => response.json())
   .then((data) => number = data.data.result[0].value[1])
   setTimeout(repeat, 1000);
