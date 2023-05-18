@@ -7,10 +7,10 @@ import StreamingPlugin from 'chartjs-plugin-streaming';
 Chart.register(StreamingPlugin, LinearScale);
 
 let number;
-let RETAINEDBYTES_API = `${process.env.PROMETHEUS_API}/api/v1/query?query=confluent_kafka_server_retained_bytes&time=${date}`;
 
 (function repeat() {
   let date = Math.floor((new Date().getTime()/1000)) - 500;
+  let RETAINEDBYTES_API = `${process.env.PROMETHEUS_API}/api/v1/query?query=confluent_kafka_server_retained_bytes&time=${date}`;
   fetch(RETAINEDBYTES_API)
   .then((response) => response.json())
   .then((data) => number = data.data.result[1].value[1]) 
