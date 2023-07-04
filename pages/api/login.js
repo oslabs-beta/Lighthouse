@@ -1,6 +1,9 @@
-import { users } from '../../database'; // mock database 
+import jwt from 'jsonwebtoken';
+import { compare } from 'bcrypt';
+import mongoose from 'mongoose';
+import User from '../../models/User';
 
-export default async function handler(req, res) {
+export default async (req, res) =>{
     const { method } = req;
 
     switch (method) {
