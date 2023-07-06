@@ -66,7 +66,7 @@ docker run -p 3000:3000 lighthouse-app
 
 
 ## Under The Hood
-Built with Next.js, GraphQL, Apollo, Prometheus, and Docker. Containerization provided by Docker.
+Built with Next.js, GraphQL, Apollo, Prometheus, and Docker.
 <p align="center">
 <img src="https://github.com/devicons/devicon/blob/master/icons/prometheus/prometheus-original-wordmark.svg" title="Prometheus" alt="Prometheus" width="50" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/graphql/graphql-plain-wordmark.svg" title="GraphQL" alt="GraphQL" width="50" height="40"/>&nbsp;
