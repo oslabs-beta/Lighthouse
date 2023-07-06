@@ -23,7 +23,7 @@ export default function Login() {
 
         if (res.ok) {
             const { token } = await res.json;
-            // store token in state
+            // store token in Auth state
             setAuth({ token });
         } else {
             throw new Error("Error validating login") 

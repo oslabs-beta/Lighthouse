@@ -12,9 +12,6 @@ export default async (req, res) =>{
                 // Get data from your request
                 const { username, password } = req.body;
 
-                // Here is where you would check the database for the user
-                // For simplicity, we will pretend 'users' is a list of users
-
                 const user = users.find(user => user.username === username && user.password === password);
 
                 if (!user) {
