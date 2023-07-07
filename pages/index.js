@@ -25,31 +25,32 @@ export default function Home() {
   const [successfulAuthCount, setSuccessfulAuthCount] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      client.refetchQueries({
-        include: "active"
-      })
-        .then((data) => {
-          data.forEach((element) => {
-
-            if (element.data.prometheus) {
-              setPrometheus(element.data.prometheus.data.result[0].value[1])
-            }
-            if (element.data.receivedRecords) {
-              setReceivedRecords(element.data.receivedRecords.data.result[0].value[1])
-            }
-            if (element.data.activeConnectionCount) {
-              setActiveConnectionCount(element.data.activeConnectionCount.data.result[0].value[1])
-            }
-            if (element.data.successfulAuthenticationCount) {
-              setSuccessfulAuthCount(element.data.successfulAuthenticationCount.data.result[0].value[1])
-            }
-          })
+    if(auth.token) {  // added this check for JWT auth
+      const interval = setInterval(() => {
+        client.refetchQueries({
+          include: "active"
         })
-    }, 5000)
+          .then((data) => {
+            data.forEach((element) => {
+              if (element.data.prometheus) {
+                setPrometheus(element.data.prometheus.data.result[0].value[1])
+              }
+              if (element.data.receivedRecords) {
+                setReceivedRecords(element.data.receivedRecords.data.result[0].value[1])
+              }
+              if (element.data.activeConnectionCount) {
+                setActiveConnectionCount(element.data.activeConnectionCount.data.result[0].value[1])
+              }
+              if (element.data.successfulAuthenticationCount) {
+                setSuccessfulAuthCount(element.data.successfulAuthenticationCount.data.result[0].value[1])
+              }
+            })
+          })
+      }, 5000)
 
-    return () => clearInterval(interval);
-  }, [])
+      return () => clearInterval(interval);
+    }
+  }, [auth.token]) // auth.token added as a dependency - only run when JWT authenticated
 
   if (!auth.token) {
     return (

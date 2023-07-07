@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 // user schema with username & password
 const userSchema = new mongoose.Schema({
@@ -26,6 +27,6 @@ userSchema.pre('save', async function(next) {
 })
 
 // create the model, or retrieve it if it already exists
-const User = mongoose.models.User || mongoose.model('User', UserSchema)
+const User = mongoose.models.User || mongoose.model('User', userSchema);
 
 export default User;

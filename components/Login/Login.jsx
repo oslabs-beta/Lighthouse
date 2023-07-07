@@ -1,9 +1,5 @@
-import dbConnect from '../../utils/dbConnect';
 import { useContext, useState } from 'react';
 import { AuthContext } from './AuthContext';
-
-// Connect database
-dbConnect();
 
 export default function Login() {
     const { setAuth } = useContext(AuthContext);

@@ -3,14 +3,15 @@ import User from '../../models/User';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
-dbConnect();
-
 export default async function handler(req, res) {
   const { method } = req;
 
   switch (method) {
     case 'POST':
       try {
+        // Connect to the Database
+        await dbConnect();
+
         const { username, password } = req.body;
 
         // Check if user exists
