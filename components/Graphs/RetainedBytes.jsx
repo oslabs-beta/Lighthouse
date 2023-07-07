@@ -1,31 +1,25 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import 'chartjs-adapter-luxon';
 import { Chart, LinearScale } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import StreamingPlugin from 'chartjs-plugin-streaming';
-import { AuthContext } from '../Login/AuthContext'
 
 Chart.register(StreamingPlugin, LinearScale);
 
+let number;
+
+(function repeat() {
+  let date = Math.floor((new Date().getTime()/1000)) - 500;
+  let RETAINEDBYTES_API = `${process.env.PROMETHEUS_API}/api/v1/query?query=confluent_kafka_server_retained_bytes&time=${date}`;
+  fetch(RETAINEDBYTES_API)
+  .then((response) => response.json())
+  .then((data) => number = data.data.result[1].value[1]) 
+  setTimeout(repeat, 1000);
+})();
+
 function RetainedBytes() {
-  const { auth } = useContext(AuthContext); // Only fetch if authenticated
-  const [number, setNumber] = useState(null);
 
-  // Modified fetch to a useEffect with dependency on Auth to prevent unnecessary server requests
-  useEffect(() => {
-    if (auth.token) {
-      (function repeat() {
-        let date = Math.floor((new Date().getTime()/1000)) - 500;
-        let RETAINEDBYTES_API = `${process.env.PROMETHEUS_API}/api/v1/query?query=confluent_kafka_server_retained_bytes&time=${date}`;
-        fetch(RETAINEDBYTES_API)
-        .then((response) => response.json())
-        .then((data) => setNumber(data.data.result[1].value[1])) 
-        setTimeout(repeat, 1000);
-      })();
-    }
-  }, [auth.token]);
-
-  return (
+    return (
     <Line
       data={{
         datasets: [{
@@ -60,4 +54,3 @@ function RetainedBytes() {
 };
 
 export default React.memo(RetainedBytes);
-

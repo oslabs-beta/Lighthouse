@@ -3,6 +3,10 @@ describe('Lighthouse Kafka Metrics Dashboard', () => {
     cy.visit('/');
   });
 
+  it('loads the main page', () => {
+    cy.contains('Lighthouse - Kafka Metrics Dashboard');
+  });
+
   it('displays the navigation bar', () => {
     cy.get('nav').should('be.visible');
   });
