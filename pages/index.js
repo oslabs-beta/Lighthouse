@@ -16,8 +16,9 @@ import { AuthContext, AuthContextProvider } from '../components/Login/AuthContex
 export default function Home() {
 
   // Verify JWT Authentication
-  const { auth } = useContext(AuthContext);
+  const { auth, setAuth } = useContext(AuthContext);
 
+  
   const [receivedRecords, setReceivedRecords] = useState(0);
   const [prometheus, setPrometheus] = useState(0);
   const [activeConnectionCount, setActiveConnectionCount] = useState(0);
@@ -53,13 +54,13 @@ export default function Home() {
   if (!auth.token) {
     return (
       <div>
-        <Login />
+        <Login setAuth={setAuth}/>
       </div>
     )
   }
 
   return (
-    <AuthContextProvider>
+    <AuthContextProvider value={auth}>
       <div className={styles.container}>
         <NavBar />
         <div className={styles.cardGrid1}>
