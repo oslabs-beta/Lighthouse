@@ -26,15 +26,15 @@ export default function CreateACcount() {
             // store token in Auth state
             setAuth({ token });
         } else {
-            throw new Error("Error validating login") 
+            throw new Error("Error validating create account") 
         }
     }
 
     return (
         <form onSubmit={handleSubmit}>
             {error & <p>{error}</p>}
-            <input name='username' type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
-            <input name='password' type='text' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <input name='New Username' type='text' placeholder='New Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
+            <input name='password' type='text' placeholder='New Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
             <button type='submit' disabled={loading}>{loading ? 'Logging in...' : 'Log In'}</button>
         </form>
     )
