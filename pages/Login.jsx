@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { useContext, useState } from 'react';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../components/Login/AuthContext';
 
 export default function Login() {
     const { setAuth } = useContext(AuthContext);
@@ -30,11 +31,19 @@ export default function Login() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            {error & <p>{error}</p>}
-            <input name='username' type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
-            <input name='password' type='text' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <button type='submit' disabled={loading}>{loading ? 'Logging in...' : 'Log In'}</button>
-        </form>
+        <div>
+            <form onSubmit={handleSubmit}>
+                {error && <p>{error}</p>}
+                <input name='username' type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)}/>
+                <input name='password' type='text' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                <button type='submit' disabled={loading}>{loading ? 'Logging in...' : 'Log In'}</button>
+            </form>
+            <div>
+            Don't have an account?
+            <Link href="CreateAccount">
+                <a>Create Account</a>
+            </Link>
+            </div>
+        </div>
     )
 }

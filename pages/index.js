@@ -8,7 +8,7 @@ import ReceivedRecords from '../components/Graphs/ReceivedRecords.jsx';
 import RetainedBytes from '../components/Graphs/RetainedBytes.jsx';
 import SuccessfulAuthenticationCount from '../components/Graphs/SuccessfulAuthenticationCount.jsx';
 import PartitionCount from '../components/Graphs/PartitionCount.jsx';
-import Login from '../components/Login/Login';
+import Login from './Login';
 import { AuthContext, AuthContextProvider } from '../components/Login/AuthContext'
 
 

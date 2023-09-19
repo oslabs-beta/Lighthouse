@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { AuthContext } from './AuthContext';
+import { AuthContext } from '../components/Login/AuthContext';
 
 export default function CreateACcount() {
     const { setAuth } = useContext(AuthContext);
@@ -15,7 +15,7 @@ export default function CreateACcount() {
         setLoading(true);
         setError(null);
 
-        const res = await fetch('/api/login', {
+        const res = await fetch('/api/createAccount', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
